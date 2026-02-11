@@ -1,119 +1,26 @@
-/* TEAM page (photo-left / content-right) + CV list (no bullet dots) */
-
-.team-page {
-  margin-top: 10px;
-}
-
-/* Person block layout */
-.person-block {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 48px;
-  align-items: start;
-  margin: 36px 0 56px 0;
-}
-
-.person-photo {
-  width: 100%;
-  max-width: 360px;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.person-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.person-kicker {
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #c85b3a;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.person-name {
-  font-size: 3rem;
-  line-height: 1.1;
-  margin: 0 0 18px 0;
-}
-
-.person-bio {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: #333;
-  max-width: 75ch;
-}
-
-/* Sections */
-.person-section {
-  margin-top: 40px;
-}
-
-.person-section h2,
-.person-section h3 {
-  font-size: 2rem;
-  margin-bottom: 14px;
-}
-
-/* CV list without dots */
-.cv-list {
-  list-style: none;     /* remove bullet dots */
+/* CV lines: plain text, no "Education" title, no bullets */
+.cv-lines {
+  list-style: none;
   padding-left: 0;
-  margin: 0;
+  margin: 18px 0 0 0;
 }
 
-.cv-list li {
-  margin: 10px 0;
+.cv-lines li {
+  margin: 8px 0;
   font-size: 1.05rem;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #333;
 }
 
-/* Period alignment like (2014-2018) */
-.cv-period {
+.cv-lines .cv-period {
   display: inline-block;
-  min-width: 130px;     /* aligns rows */
+  min-width: 120px;  /* aligns periods vertically */
   color: #222;
 }
 
-/* Optional link line */
-.cv-link {
-  margin-top: 14px;
-}
-
-/* Divider between people */
-.person-divider {
-  border: 0;
-  border-top: 1px solid rgba(0,0,0,0.12);
-  margin: 0;
-}
-
-/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .person-block {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    margin: 26px 0 40px 0;
-  }
-
-  .person-photo {
-    max-width: 420px;
-  }
-
-  .person-name {
-    font-size: 2.2rem;
-  }
-
-  .person-section h2,
-  .person-section h3 {
-    font-size: 1.6rem;
-  }
-
-  .cv-period {
-    min-width: 0; /* allow wrapping on small screens */
+  .cv-lines .cv-period {
+    min-width: 0;
     margin-right: 8px;
   }
 }
