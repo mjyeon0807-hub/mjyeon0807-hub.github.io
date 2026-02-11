@@ -4,6 +4,7 @@ title: "Team"
 subtitle: "Lab Members"
 ---
 
+<!-- Person 1 -->
 <div class="team-hero">
   <div class="team-photo">
     <img src="/assets/img/pi.jpg" alt="Principal Investigator photo">
@@ -22,13 +23,15 @@ subtitle: "Lab Members"
 
       <div class="team-edu-item">
         <div class="team-edu-school">The Wistar Institute, U.S.</div>
-        <p class="team-edu-detail">Postdoc, 2022.03-2026.02</p>
+        <p class="team-edu-detail">Postdoc, 2022.03–2026.02</p>
       </div>
 
       <div class="team-edu-item">
         <div class="team-edu-school">Kangwon National University, Korea</div>
-        <p class="team-edu-detail">Ph.D., Biochemistry, 2016.09-2022.02</p>
+        <p class="team-edu-detail">Ph.D., Biochemistry, 2016.09–2022.02</p>
       </div>
     </div>
   </div>
 </div>
+
+<hr>
