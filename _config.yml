@@ -134,3 +134,6 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+
+site-css:
+  - "/assets/css/custom.css"
