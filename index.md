@@ -1,7 +1,7 @@
 ---
 layout: home
-title: "Home"
-subtitle: "Lab of Molecular and Cellular Crosstalk (MXC) · Chungbuk National University College of Medicine"
+title: "WELCOME"
+subtitle: "Lab of Molecular and Cellular Crosstalk"
 ---
 
 ## Welcome
