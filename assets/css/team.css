@@ -27,7 +27,7 @@
   text-transform: uppercase;
   color: #c85b3a; /* accent tone */
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .team-name {
@@ -45,6 +45,11 @@
 
 .team-section {
   margin-top: 44px;
+}
+
+/* ✅ Add it here (gap between schools) */
+.team-edu-item {
+  margin-bottom: 34px;
 }
 
 .team-edu-school {
