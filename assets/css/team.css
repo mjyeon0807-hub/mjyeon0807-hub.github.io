@@ -1,84 +1,119 @@
-/* TEAM page layout (photo left, content right) */
+/* TEAM page (photo-left / content-right) + CV list (no bullet dots) */
 
-.team-hero {
+.team-page {
+  margin-top: 10px;
+}
+
+/* Person block layout */
+.person-block {
   display: grid;
   grid-template-columns: 360px 1fr;
   gap: 48px;
   align-items: start;
-  margin-top: 10px;
+  margin: 36px 0 56px 0;
 }
 
-.team-photo {
+.person-photo {
   width: 100%;
   max-width: 360px;
   border-radius: 6px;
   overflow: hidden;
 }
 
-.team-photo img {
+.person-photo img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.team-kicker {
+.person-kicker {
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #c85b3a; /* similar accent tone */
+  color: #c85b3a;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-.team-name {
+.person-name {
   font-size: 3rem;
   line-height: 1.1;
   margin: 0 0 18px 0;
 }
 
-.team-bio {
+.person-bio {
   font-size: 1.05rem;
   line-height: 1.75;
   color: #333;
-  max-width: 70ch;
+  max-width: 75ch;
 }
 
-.team-section {
-  margin-top: 44px;
+/* Sections */
+.person-section {
+  margin-top: 40px;
 }
 
-.team-section h2 {
+.person-section h2,
+.person-section h3 {
   font-size: 2rem;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
-.team-edu-item {
-  margin-bottom: 24px;
+/* CV list without dots */
+.cv-list {
+  list-style: none;     /* remove bullet dots */
+  padding-left: 0;
+  margin: 0;
 }
 
-.team-edu-school {
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+.cv-list li {
+  margin: 10px 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
-.team-edu-detail {
-  margin: 4px 0 0 0;
-  color: #444;
+/* Period alignment like (2014-2018) */
+.cv-period {
+  display: inline-block;
+  min-width: 130px;     /* aligns rows */
+  color: #222;
 }
 
-/* Mobile */
+/* Optional link line */
+.cv-link {
+  margin-top: 14px;
+}
+
+/* Divider between people */
+.person-divider {
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  margin: 0;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .team-hero {
+  .person-block {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
+    margin: 26px 0 40px 0;
   }
 
-  .team-photo {
+  .person-photo {
     max-width: 420px;
   }
 
-  .team-name {
+  .person-name {
     font-size: 2.2rem;
+  }
+
+  .person-section h2,
+  .person-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .cv-period {
+    min-width: 0; /* allow wrapping on small screens */
+    margin-right: 8px;
   }
 }
