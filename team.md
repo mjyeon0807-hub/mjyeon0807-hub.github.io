@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Team"
-subtitle: ""
+subtitle: "Lab Members"
 ---
 
 <div class="team-hero">
