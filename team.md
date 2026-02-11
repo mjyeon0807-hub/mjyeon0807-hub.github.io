@@ -11,7 +11,7 @@ subtitle: "Lab Members"
 
   <div class="team-content">
     <div class="team-kicker">Principal Investigator</div>
-    <h1 class="team-name">Your Name</h1>
+    <h1 class="team-name">Minjeong Yeon</h1>
 
     <div class="team-bio">
       <p>
@@ -20,17 +20,14 @@ subtitle: "Lab Members"
       </p>
     </div>
 
-    <div class="team-section">
-      <h2>Education</h2>
-
       <div class="team-edu-item">
-        <div class="team-edu-school">University of Minnesota Twin Cities</div>
-        <p class="team-edu-detail">Ph.D., Computer Science, 2011</p>
+        <div class="team-edu-school">The Wistar Institute, U.S.</div>
+        <p class="team-edu-detail">Postdoc, 2022.03-2026.02</p>
       </div>
 
       <div class="team-edu-item">
-        <div class="team-edu-school">Inha University, Korea</div>
-        <p class="team-edu-detail">B.E., Computer Science, 2004</p>
+        <div class="team-edu-school">Kangwon National University, Korea</div>
+        <p class="team-edu-detail">Ph.D., Biochemistry, 2016.09-2022.02</p>
       </div>
     </div>
   </div>
