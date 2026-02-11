@@ -25,14 +25,6 @@ navbar-links:
   Activity: "activity"
   Contact: "contact"
 
-################
-# --- Logo --- #
-################
-
-# Upload your logo to assets/img/ and name it logo.png (or change this filename)
-avatar: "/assets/img/logo.png"
-round-avatar: false
-
 #####################################
 # --- Footer social media links --- #
 #####################################
