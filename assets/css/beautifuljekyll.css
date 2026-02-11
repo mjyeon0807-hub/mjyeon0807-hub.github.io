@@ -1124,3 +1124,41 @@ pre {
     display: inline-block;
   }
 }
+
+/* --- Mobile-friendly tweaks --- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container, .wrapper, main, header, footer {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  /* Reduce big headings */
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+
+  /* Prevent horizontal scrolling */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Make tables scroll instead of breaking layout */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* Add comfortable padding */
+  main, .container, .wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
