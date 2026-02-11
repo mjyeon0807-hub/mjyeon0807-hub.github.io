@@ -1,49 +1,74 @@
 ---
 layout: page
 title: "Team"
-subtitle: "Lab Members"
+subtitle: ""
 ---
 
-<div class="team-hero">
-  <div class="team-photo">
-    <img src="/assets/img/pi.jpg" alt="Principal Investigator photo">
-  </div>
+<div class="team-page">
 
-  <div class="team-content">
-    <div class="team-kicker">Principal Investigator</div>
-    <h1 class="team-name">Your Name</h1>
-
-    <div class="team-bio">
-      <p>
-        Write a short introduction here. Example: I lead the Lab of Molecular and Cellular Crosstalk (MXC)
-        at Chungbuk National University College of Medicine. Our lab studies intercellular communication in
-        cancer and immunity, with interests in tumor microenvironment, extracellular vesicles, cancer immunology,
-        and mitochondrial fitness.
-      </p>
-
-      <p>
-        (Add 1–2 more paragraphs if you want.)
-      </p>
+  <!-- Person 1 -->
+  <div class="person-block">
+    <div class="person-photo">
+      <img src="/assets/img/people/pi.jpg" alt="Principal Investigator photo">
     </div>
 
-    <div class="team-section">
-      <h2>Education</h2>
+    <div class="person-content">
+      <div class="person-kicker">Principal Investigator</div>
+      <h1 class="person-name">Minjeong Yeon</h1>
 
-      <div class="team-edu-item">
-        <div class="team-edu-school">University Name</div>
-        <p class="team-edu-detail">Ph.D., Major, Year</p>
+      <div class="person-bio">
+        <p>
+          (Write 2–4 sentences about your lab and research focus. You can paste your real bio here.)
+        </p>
       </div>
 
-      <div class="team-edu-item">
-        <div class="team-edu-school">University Name</div>
-        <p class="team-edu-detail">B.S., Major, Year</p>
+      <!-- This is the part you change like the second image -->
+      <div class="person-section">
+        <h2>CV</h2>
+
+        <ul class="cv-list">
+          <li><span class="cv-period">(2014–2018)</span> <strong>B.S.</strong> in Biology, Kyung Hee University</li>
+          <li><span class="cv-period">(2018–2023)</span> <strong>Ph.D.</strong> in Biomedical Science, Kyung Hee University</li>
+          <li><span class="cv-period">(2023–2025)</span> <strong>Postdoctoral Researcher</strong>, University of Pennsylvania</li>
+          <li><strong>Research interests:</strong> Tumor microenvironment, Extracellular vesicles, Cancer immunology, Mitochondria fitness</li>
+        </ul>
+
+        <p class="cv-link">
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+        </p>
       </div>
     </div>
   </div>
+
+  <hr class="person-divider">
+
+  <!-- Person 2 -->
+  <div class="person-block">
+    <div class="person-photo">
+      <img src="/assets/img/people/member1.jpg" alt="Lab member photo">
+    </div>
+
+    <div class="person-content">
+      <div class="person-kicker">Postdoctoral Fellow</div>
+      <h2 class="person-name">Member Name</h2>
+
+      <div class="person-bio">
+        <p>
+          (Optional short bio.)
+        </p>
+      </div>
+
+      <div class="person-section">
+        <h2>CV</h2>
+
+        <ul class="cv-list">
+          <li><span class="cv-period">(2016–2020)</span> <strong>B.S.</strong> in _______, University</li>
+          <li><span class="cv-period">(2020–2024)</span> <strong>Ph.D.</strong> in _______, University</li>
+          <li><span class="cv-period">(2024–Present)</span> <strong>Postdoctoral Fellow</strong>, Institution</li>
+          <li><strong>Research interests:</strong> ________, ________, ________</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </div>
-
-<hr>
-
-## Members
-- (Name) — (Role)
-- (Name) — (Role)
