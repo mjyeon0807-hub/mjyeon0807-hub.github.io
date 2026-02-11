@@ -2,7 +2,7 @@
 
 .team-hero {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 240px 1fr; /* narrower photo, wider content */
   gap: 48px;
   align-items: start;
   margin-top: 10px;
@@ -10,7 +10,7 @@
 
 .team-photo {
   width: 100%;
-  max-width: 360px;
+  max-width: 240px; /* match the photo column */
   border-radius: 6px;
   overflow: hidden;
 }
