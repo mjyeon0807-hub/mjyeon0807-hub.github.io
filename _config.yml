@@ -129,3 +129,4 @@ plugins:
 
 site-css:
   - "/assets/css/custom.css"
+  - "/assets/css/team.css"
