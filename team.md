@@ -1,6 +1,6 @@
 ---
 title: "Team"
-subtitle: "People in the MXC Lab"
+subtitle: "Lab Members"
 ---
 
 ## Principal Investigator
