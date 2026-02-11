@@ -1,0 +1,84 @@
+/* TEAM page layout (photo left, content right) */
+
+.team-hero {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+.team-photo {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.team-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.team-kicker {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c85b3a; /* similar accent tone */
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.team-name {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0 0 18px 0;
+}
+
+.team-bio {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #333;
+  max-width: 70ch;
+}
+
+.team-section {
+  margin-top: 44px;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.team-edu-item {
+  margin-bottom: 24px;
+}
+
+.team-edu-school {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.team-edu-detail {
+  margin: 4px 0 0 0;
+  color: #444;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .team-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .team-photo {
+    max-width: 420px;
+  }
+
+  .team-name {
+    font-size: 2.2rem;
+  }
+}
