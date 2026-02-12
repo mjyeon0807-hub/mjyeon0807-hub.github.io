@@ -1,27 +1,41 @@
-/* TEAM page layout (photo left, content right) - repeated blocks (Layout C) */
+/* TEAM page: 2 columns, 3 rows per person (photo/labels on left; content on right) */
 
-.team-hero {
+.team-person {
   display: grid;
-  grid-template-columns: 220px 1fr; /* narrow photo, wide content */
-  gap: 28px;
+  grid-template-columns: 240px 1fr; /* left | right */
+  grid-template-areas:
+    "photo header"
+    "exp_label exp_list"
+    "edu_label edu_list";
+  column-gap: 34px;
+  row-gap: 18px;
   align-items: start;
-  margin-top: 10px;
-  margin-bottom: 44px; /* space between people */
+
+  margin: 28px 0 54px 0;
 }
 
-/* (1) move photo down a bit so it visually aligns with the name */
+/* Row 1: left photo */
 .team-photo {
+  grid-area: photo;
+
   width: 100%;
-  max-width: 220px; /* match the photo column */
-  border-radius: 6px;
+  max-width: 240px;
+  border-radius: 8px;
   overflow: hidden;
-  margin-top: 14px; /* <-- adjust up/down as you like */
+
+  /* (1) move photo down slightly vs name line */
+  margin-top: 12px; /* adjust: 0~20px */
 }
 
 .team-photo img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* Row 1: right header (kicker + name + bio) */
+.team-header {
+  grid-area: header;
 }
 
 .team-kicker {
@@ -33,9 +47,9 @@
   margin-bottom: 8px;
 }
 
-/* (4) decrease name font size a little bit */
+/* (4) decrease name font size */
 .team-name {
-  font-size: 2.2rem; /* was bigger */
+  font-size: 2.2rem;
   line-height: 1.12;
   margin: 0 0 12px 0;
 }
@@ -44,82 +58,91 @@
   font-size: 1.02rem;
   line-height: 1.75;
   color: #333;
-  max-width: 75ch;
+  max-width: 85ch;
 }
 
-/*
-(2)(3) Team section becomes a 2-column grid:
-- left column: labels (Experiences/Education)
-- right column: corresponding entries
-*/
-.team-section {
-  margin-top: 22px;
-  display: grid;
-  grid-template-columns: 220px 1fr; /* left labels align with photo width */
-  column-gap: 28px;
-  row-gap: 22px;
-  align-items: start;
-}
-
-/* Left-side label text */
-.team-label {
-  font-size: 0.95rem; /* (5) smaller label font */
+/* Row 2/3: left labels */
+.team-side-title {
+  font-size: 0.95rem; /* (5) smaller */
   font-weight: 800;
-  text-transform: uppercase;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: #222;
-  padding-top: 2px; /* small nudge for baseline alignment */
+
+  /* aligns label with first text line on the right */
+  padding-top: 2px;
 }
 
-/* Right-side entry blocks */
-.team-edu-item {
-  margin: 0; /* spacing handled by grid row-gap */
+.team-exp-label {
+  grid-area: exp_label;
 }
 
-/* (5) make these a bit smaller than before */
-.team-edu-school {
+.team-edu-label {
+  grid-area: edu_label;
+}
+
+/* Row 2: right experiences list */
+.team-exp-list {
+  grid-area: exp_list;
+}
+
+/* Row 3: right education list */
+.team-edu-list {
+  grid-area: edu_list;
+}
+
+/* Shared list styling */
+.team-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.team-list-item {
+  margin-bottom: 14px;
+}
+
+/* (5) decrease sizes for exp/edu entries */
+.team-item-title {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-size: 1.02rem; /* smaller */
+  font-size: 0.98rem;
 }
 
-.team-edu-detail {
+.team-item-detail {
   margin: 4px 0 0 0;
   color: #444;
-  font-size: 0.98rem; /* smaller */
+  font-size: 0.94rem;
 }
 
-/* Divider line between people */
+/* Divider between people */
 .team-divider {
   border: 0;
   border-top: 1px solid rgba(0,0,0,0.12);
   margin: 0 0 44px 0;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .team-hero {
+/* Mobile: stack */
+@media (max-width: 900px) {
+  .team-person {
     grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-areas:
+      "photo"
+      "header"
+      "exp_label"
+      "exp_list"
+      "edu_label"
+      "edu_list";
+    row-gap: 12px;
   }
 
   .team-photo {
     max-width: 320px;
-    margin-top: 0; /* on mobile, no need to push down */
+    margin-top: 0;
   }
 
   .team-name {
     font-size: 2.0rem;
-  }
-
-  /* On mobile stack labels above content for readability */
-  .team-section {
-    grid-template-columns: 1fr;
-    row-gap: 10px;
-  }
-
-  .team-label {
-    margin-top: 10px;
   }
 }
