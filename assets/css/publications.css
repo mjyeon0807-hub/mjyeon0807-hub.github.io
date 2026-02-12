@@ -6,53 +6,48 @@
   margin-bottom: 22px;
 }
 
-/* YEAR divider row */
-.pub-year {
-  margin: 28px 0 10px 0;
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: #1f2a44;
+/* Timeline container: draws ONE continuous line */
+.pubs-timeline {
+  position: relative;
+  padding-left: 190px; /* space for year + timeline column */
 }
 
-/* Publication item: date (with timeline) + content */
+/* the vertical line (continuous) */
+.pubs-timeline::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 150px;          /* x-position of the line */
+  width: 4px;
+  background: #cbbda9;  /* beige */
+  border-radius: 3px;
+}
+
+/* Each publication row */
 .pub-item {
+  position: relative;
   display: grid;
-  grid-template-columns: 160px 1fr; /* date | content */
+  grid-template-columns: 120px 1fr; /* year | content */
   column-gap: 28px;
   align-items: start;
-
   padding: 18px 0;
-  border-top: 1px solid rgba(0,0,0,0.10);
 }
 
-/* Left column (date + timeline visuals) */
-.pub-date {
-  position: relative;
-  padding-right: 18px;
+/* Left text: YEAR only */
+.pub-year {
   font-weight: 900;
   font-size: 1.25rem;
   color: #1f2a44;
   white-space: nowrap;
 }
 
-/* vertical line */
-.pub-date::after {
+/* dot on the line for each item */
+.pub-item::before {
   content: "";
   position: absolute;
-  top: -18px;     /* extends above item */
-  bottom: -18px;  /* extends below item */
-  right: 4px;
-  width: 4px;
-  background: #cbbda9; /* beige line like your screenshot */
-  border-radius: 3px;
-}
-
-/* dot */
-.pub-date::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: -2px;   /* centers dot on the line */
+  top: 28px;            /* vertical dot position within the row */
+  left: 143px;          /* centers dot on the line (150px line - radius) */
   width: 14px;
   height: 14px;
   background: #cbbda9;
@@ -93,19 +88,22 @@
   color: #444;
 }
 
-/* Mobile */
+/* Mobile: disable the timeline visuals */
 @media (max-width: 900px) {
+  .pubs-timeline {
+    padding-left: 0;
+  }
+
+  .pubs-timeline::before {
+    display: none;
+  }
+
   .pub-item {
     grid-template-columns: 1fr;
-    row-gap: 10px;
+    row-gap: 8px;
   }
 
-  .pub-date {
-    padding-right: 0;
-  }
-
-  .pub-date::after,
-  .pub-date::before {
-    display: none; /* hide timeline on small screens (optional) */
+  .pub-item::before {
+    display: none;
   }
 }
