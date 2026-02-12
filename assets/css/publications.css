@@ -1,4 +1,4 @@
-/* Publications: continuous left timeline + dots + YEAR only */
+/* Publications: continuous left timeline line + YEAR to the LEFT of the line (no dots) */
 
 .pubs-wrap {
   margin-top: 18px;
@@ -8,62 +8,67 @@
   margin-bottom: 22px;
 }
 
-/* Timeline container: ONE continuous vertical line near the left edge */
+/*
+Layout:
+[ year ][ line ][ content ]
+We draw ONE continuous line on the container.
+*/
 .pubs-timeline {
   position: relative;
-  padding-left: 70px !important; /* space for the year text */
+
+  /* Give space for year + gap + line + gap before the content starts */
+  padding-left: 120px !important; /* controls how far the content is from the left edge */
 }
 
-/* the vertical line */
+/* Continuous vertical line */
 .pubs-timeline::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 18px !important;   /* near left edge */
+
+  left: 78px !important; /* the line x-position */
   width: 4px;
-  background: #cbbda9;     /* beige */
+  background: #cbbda9;
   border-radius: 3px;
 }
 
-/* Each publication row */
+/* Each publication row: 2 columns (year | content) */
 .pub-item {
   position: relative;
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr) !important; /* year | content */
-  column-gap: 22px;
+
+  /* Make the YEAR column end right before the line */
+  grid-template-columns: 62px minmax(0, 1fr) !important; /* year | content */
+  column-gap: 36px; /* space between year and content (line sits inside this gap visually) */
+
   align-items: start;
   padding: 18px 0;
 
-  /* remove dividers (theme/older css) */
   border: 0 !important;
   border-top: 0 !important;
   border-bottom: 0 !important;
 }
 
-/* Dot for each row (centered on the vertical line) */
+/* Remove dots completely */
 .pub-item::before {
-  content: "";
-  position: absolute;
-  top: 28px;               /* aligns dot with title first line */
-  left: 11px !important;   /* line-left(18) - dotRadius(7) */
-  width: 14px;
-  height: 14px;
-  background: #cbbda9;
-  border-radius: 50%;
+  content: none !important;
+  display: none !important;
 }
 
-/* Left column: YEAR only */
+/* YEAR text */
 .pub-year {
   font-weight: 900;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: #1f2a44;
   white-space: nowrap;
+  text-align: right; /* pushes year closer to the line */
+  padding-right: 8px; /* small breathing room before the line */
 }
 
-/* Hide old markup if it still exists */
+/* Hide any old month-year date if still in HTML */
 .pub-date {
-  display: none !important; /* hides "Aug 2025" if still in the page */
+  display: none !important;
 }
 
 /* Right column content */
@@ -100,7 +105,7 @@
   color: #444;
 }
 
-/* Mobile: simplify (optional) */
+/* Mobile: remove timeline line and stack */
 @media (max-width: 900px) {
   .pubs-timeline {
     padding-left: 0 !important;
@@ -115,7 +120,8 @@
     row-gap: 8px;
   }
 
-  .pub-item::before {
-    display: none;
+  .pub-year {
+    text-align: left;
+    padding-right: 0;
   }
 }
