@@ -30,7 +30,7 @@ subtitle: "Lab Members"
   <div class="team2-exp-list">
   <ul class="team2-list">
     <li class="team2-item">
-      <div class="team2-item-title">Assistant Professor</div>
+      <div class="team2-item-title">Assistant professor</div>
       <p class="team2-item-detail">2026.03-Current Chungbuk National University, Korea </p>
     </li>
 
