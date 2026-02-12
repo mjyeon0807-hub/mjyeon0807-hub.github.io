@@ -62,7 +62,7 @@
 
 /* Left labels row 2/3 */
 .team2-label {
-  font-size: 1.5rem;  /* smaller */
+  font-size: 1.2rem;  /* smaller */
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -89,7 +89,6 @@
 
 .team2-item-title {
   font-weight: 800;
-  text-transform: uppercase;
   letter-spacing: 0.06em;
   font-size: 0.98rem; /* smaller */
 }
