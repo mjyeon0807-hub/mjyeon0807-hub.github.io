@@ -1,4 +1,4 @@
-/* Publications: continuous left timeline + dots + YEAR only (no month) */
+/* Publications: continuous left timeline + dots + YEAR only */
 
 .pubs-wrap {
   margin-top: 18px;
@@ -11,7 +11,7 @@
 /* Timeline container: ONE continuous vertical line near the left edge */
 .pubs-timeline {
   position: relative;
-  padding-left: 70px; /* enough space for year text while maximizing content width */
+  padding-left: 70px !important; /* space for the year text */
 }
 
 /* the vertical line */
@@ -20,9 +20,9 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 18px;          /* near left edge */
+  left: 18px !important;   /* near left edge */
   width: 4px;
-  background: #cbbda9; /* beige */
+  background: #cbbda9;     /* beige */
   border-radius: 3px;
 }
 
@@ -30,7 +30,7 @@
 .pub-item {
   position: relative;
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr); /* year | content */
+  grid-template-columns: 72px minmax(0, 1fr) !important; /* year | content */
   column-gap: 22px;
   align-items: start;
   padding: 18px 0;
@@ -45,8 +45,8 @@
 .pub-item::before {
   content: "";
   position: absolute;
-  top: 28px;  /* aligns dot roughly with the title first line; adjust if needed */
-  left: 11px; /* line-left (18) - dotRadius (7) = 11 */
+  top: 28px;               /* aligns dot with title first line */
+  left: 11px !important;   /* line-left(18) - dotRadius(7) */
   width: 14px;
   height: 14px;
   background: #cbbda9;
@@ -61,9 +61,9 @@
   white-space: nowrap;
 }
 
-/* Hide old markup if still present */
+/* Hide old markup if it still exists */
 .pub-date {
-  display: none !important; /* in case old "Aug 2025" is still in the HTML */
+  display: none !important; /* hides "Aug 2025" if still in the page */
 }
 
 /* Right column content */
@@ -103,7 +103,7 @@
 /* Mobile: simplify (optional) */
 @media (max-width: 900px) {
   .pubs-timeline {
-    padding-left: 0;
+    padding-left: 0 !important;
   }
 
   .pubs-timeline::before {
@@ -111,7 +111,7 @@
   }
 
   .pub-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     row-gap: 8px;
   }
 
