@@ -1,5 +1,5 @@
 ---
-title: "Activity"
+title: "News"
 subtitle: "News, seminars, and lab life"
 ---
 
