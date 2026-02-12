@@ -4,8 +4,8 @@ title: "Publications"
 subtitle: "Selected Publications"
 ---
 
-<!-- IMPORTANT: bump v= number whenever you change publications.css -->
-<link rel="stylesheet" href="/assets/css/publications.css?v=99">
+<!-- Bump v= when you change publications.css -->
+<link rel="stylesheet" href="/assets/css/publications.css?v=200">
 
 <div class="pubs-wrap">
   <div class="pubs-header">
