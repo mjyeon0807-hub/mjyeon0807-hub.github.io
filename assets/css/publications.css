@@ -1,119 +1,101 @@
-/* Publications: YEAR | LINE | CONTENT (no dots, no global/pseudo line) */
+/* v2: YEAR | LINE | CONTENT (no dots). Uses new class names to avoid conflicts */
 
-.pubs-wrap {
+.pubs2-wrap {
   margin-top: 18px;
 }
 
-.pubs-header {
+.pubs2-header {
   margin-bottom: 22px;
 }
 
-/* IMPORTANT: kill any old timeline pseudo-line if it exists in other CSS */
-.pubs-timeline::before,
-.pubs-timeline::after,
-.pub-date::before,
-.pub-date::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Timeline list container */
-.pubs-timeline {
+.pubs2-timeline {
   margin-top: 6px;
 }
 
-/* Each publication row: 3 columns */
-.pub-item {
+/* Each row: 3 columns */
+.pubs2-item {
   display: grid !important;
   grid-template-columns: 64px 22px minmax(0, 1fr) !important; /* year | line | content */
   column-gap: 16px !important;
   align-items: start;
   padding: 18px 0;
-
-  border: 0 !important; /* remove dividers */
+  border: 0 !important;
 }
 
-/* YEAR on the LEFT of the line */
-.pub-year {
+/* Year to the LEFT of the line */
+.pubs2-year {
   font-weight: 900;
   font-size: 1.15rem;
   color: #1f2a44;
   white-space: nowrap;
-  text-align: right;  /* year hugs the line */
+  text-align: right;
   padding-right: 6px;
 }
 
-/* The middle column that contains the vertical line */
-.pub-line {
+/* Line column */
+.pubs2-line {
   position: relative;
   width: 22px;
-  min-height: 100%;
 }
 
-/* Draw the vertical line inside the middle column */
-.pub-line::before {
+.pubs2-line::before {
   content: "";
   position: absolute;
-  top: -18px;     /* extend to connect with previous item */
-  bottom: -18px;  /* extend to connect with next item */
-  left: 9px;      /* center 4px line inside 22px col */
+  top: -18px;
+  bottom: -18px;
+  left: 9px; /* center the 4px line */
   width: 4px;
   background: #cbbda9;
   border-radius: 3px;
 }
 
-/* Hide any old month-year field if still in HTML */
-.pub-date {
-  display: none !important;
-}
-
-/* Content styling */
-.pub-title {
+/* Content */
+.pubs2-title {
   font-weight: 900;
   font-size: 1.18rem;
   line-height: 1.35;
   margin: 0 0 10px 0;
 }
 
-.pub-title a {
+.pubs2-title a {
   color: inherit;
   text-decoration: none;
 }
 
-.pub-title a:hover {
+.pubs2-title a:hover {
   text-decoration: underline;
 }
 
-.pub-authors {
+.pubs2-authors {
   margin: 0 0 10px 0;
   color: #333;
   line-height: 1.6;
 }
 
-.pub-journal {
+.pubs2-journal {
   margin: 0;
   font-weight: 800;
   color: #111;
 }
 
-.pub-journal span {
+.pubs2-journal span {
   font-weight: 500;
   color: #444;
 }
 
-/* Mobile: stack and hide the line column */
+/* Mobile */
 @media (max-width: 900px) {
-  .pub-item {
+  .pubs2-item {
     grid-template-columns: 1fr !important;
     row-gap: 8px !important;
   }
 
-  .pub-year {
+  .pubs2-year {
     text-align: left;
     padding-right: 0;
   }
 
-  .pub-line {
+  .pubs2-line {
     display: none !important;
   }
 }
