@@ -1,47 +1,52 @@
-/* Publications: continuous left timeline + YEAR only */
+/* Publications: continuous left timeline + dots + YEAR only (no month) */
 
-.pubs-wrap { margin-top: 18px; }
-.pubs-header { margin-bottom: 22px; }
-
-/* The continuous vertical line is on the container (NOT per item) */
-.pubs-timeline {
-  position: relative;
-  padding-left: 190px; /* room for year text + line */
+.pubs-wrap {
+  margin-top: 18px;
 }
 
-/* continuous line */
+.pubs-header {
+  margin-bottom: 22px;
+}
+
+/* Timeline container: ONE continuous vertical line near the left edge */
+.pubs-timeline {
+  position: relative;
+  padding-left: 70px; /* enough space for year text while maximizing content width */
+}
+
+/* the vertical line */
 .pubs-timeline::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 150px;
+  left: 18px;          /* near left edge */
   width: 4px;
-  background: #cbbda9;
+  background: #cbbda9; /* beige */
   border-radius: 3px;
 }
 
-/* Each paper row */
+/* Each publication row */
 .pub-item {
   position: relative;
   display: grid;
-  grid-template-columns: 120px minmax(0, 1fr); /* year | content */
-  column-gap: 28px;
+  grid-template-columns: 72px minmax(0, 1fr); /* year | content */
+  column-gap: 22px;
   align-items: start;
   padding: 18px 0;
 
-  /* remove any divider lines from earlier CSS/theme */
+  /* remove dividers (theme/older css) */
   border: 0 !important;
   border-top: 0 !important;
   border-bottom: 0 !important;
 }
 
-/* Dot per paper */
+/* Dot for each row (centered on the vertical line) */
 .pub-item::before {
   content: "";
   position: absolute;
-  top: 28px;
-  left: 143px; /* 150 - (14/2) */
+  top: 28px;  /* aligns dot roughly with the title first line; adjust if needed */
+  left: 11px; /* line-left (18) - dotRadius (7) = 11 */
   width: 14px;
   height: 14px;
   background: #cbbda9;
@@ -56,19 +61,12 @@
   white-space: nowrap;
 }
 
-/* If your old markup still uses .pub-date, hide it so it doesn't show "Aug 2025" */
+/* Hide old markup if still present */
 .pub-date {
-  display: none !important;
+  display: none !important; /* in case old "Aug 2025" is still in the HTML */
 }
 
-/* If your old markup still has year headers like <div class="pub-year-header">2025</div>, hide them */
-.pub-year-header,
-.pub-year-title,
-.pub-year-divider {
-  display: none !important;
-}
-
-/* Text */
+/* Right column content */
 .pub-title {
   font-weight: 900;
   font-size: 1.18rem;
@@ -76,8 +74,14 @@
   margin: 0 0 10px 0;
 }
 
-.pub-title a { color: inherit; text-decoration: none; }
-.pub-title a:hover { text-decoration: underline; }
+.pub-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-title a:hover {
+  text-decoration: underline;
+}
 
 .pub-authors {
   margin: 0 0 10px 0;
@@ -91,12 +95,27 @@
   color: #111;
 }
 
-.pub-journal span { font-weight: 500; color: #444; }
+.pub-journal span {
+  font-weight: 500;
+  color: #444;
+}
 
-/* Mobile */
+/* Mobile: simplify (optional) */
 @media (max-width: 900px) {
-  .pubs-timeline { padding-left: 0; }
-  .pubs-timeline::before { display: none; }
-  .pub-item { grid-template-columns: 1fr; row-gap: 8px; }
-  .pub-item::before { display: none; }
+  .pubs-timeline {
+    padding-left: 0;
+  }
+
+  .pubs-timeline::before {
+    display: none;
+  }
+
+  .pub-item {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+
+  .pub-item::before {
+    display: none;
+  }
 }
