@@ -1,4 +1,4 @@
-/* Publications: continuous left timeline line + YEAR to the LEFT of the line (no dots) */
+/* Publications: YEAR | LINE | CONTENT (no dots) */
 
 .pubs-wrap {
   margin-top: 18px;
@@ -8,70 +8,65 @@
   margin-bottom: 22px;
 }
 
-/*
-Layout:
-[ year ][ line ][ content ]
-We draw ONE continuous line on the container.
-*/
+/* Optional: reduce left/right whitespace from theme containers */
+.pubs-wrap .container,
+.pubs-wrap .container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Timeline list container (no big left padding anymore) */
 .pubs-timeline {
-  position: relative;
-
-  /* Give space for year + gap + line + gap before the content starts */
-  padding-left: 120px !important; /* controls how far the content is from the left edge */
+  margin-top: 6px;
 }
 
-/* Continuous vertical line */
-.pubs-timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-
-  left: 78px !important; /* the line x-position */
-  width: 4px;
-  background: #cbbda9;
-  border-radius: 3px;
-}
-
-/* Each publication row: 2 columns (year | content) */
+/* Each publication row: 3 columns */
 .pub-item {
-  position: relative;
   display: grid;
-
-  /* Make the YEAR column end right before the line */
-  grid-template-columns: 62px minmax(0, 1fr) !important; /* year | content */
-  column-gap: 36px; /* space between year and content (line sits inside this gap visually) */
-
+  grid-template-columns: 64px 22px minmax(0, 1fr); /* year | line | content */
+  column-gap: 18px;
   align-items: start;
+
   padding: 18px 0;
 
-  border: 0 !important;
-  border-top: 0 !important;
-  border-bottom: 0 !important;
+  border: 0 !important; /* remove any dividers */
 }
 
-/* Remove dots completely */
-.pub-item::before {
-  content: none !important;
-  display: none !important;
-}
-
-/* YEAR text */
+/* YEAR on the left */
 .pub-year {
   font-weight: 900;
   font-size: 1.15rem;
   color: #1f2a44;
   white-space: nowrap;
-  text-align: right; /* pushes year closer to the line */
-  padding-right: 8px; /* small breathing room before the line */
+  text-align: right;     /* pushes year toward the line */
+  padding-right: 6px;
 }
 
-/* Hide any old month-year date if still in HTML */
+/* The vertical line column */
+.pub-line {
+  position: relative;
+  width: 22px;
+}
+
+/* Draw the vertical line (continuous within each row).
+   When rows stack, it looks continuous. */
+.pub-line::before {
+  content: "";
+  position: absolute;
+  top: -18px;     /* extend above row padding to connect */
+  bottom: -18px;  /* extend below row padding to connect */
+  left: 9px;      /* center the 4px line inside 22px */
+  width: 4px;
+  background: #cbbda9;
+  border-radius: 3px;
+}
+
+/* Hide any old date markup */
 .pub-date {
   display: none !important;
 }
 
-/* Right column content */
+/* Content styling */
 .pub-title {
   font-weight: 900;
   font-size: 1.18rem;
@@ -105,23 +100,19 @@ We draw ONE continuous line on the container.
   color: #444;
 }
 
-/* Mobile: remove timeline line and stack */
+/* Mobile: simplify */
 @media (max-width: 900px) {
-  .pubs-timeline {
-    padding-left: 0 !important;
-  }
-
-  .pubs-timeline::before {
-    display: none;
-  }
-
   .pub-item {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
     row-gap: 8px;
   }
 
   .pub-year {
     text-align: left;
     padding-right: 0;
+  }
+
+  .pub-line {
+    display: none;
   }
 }
