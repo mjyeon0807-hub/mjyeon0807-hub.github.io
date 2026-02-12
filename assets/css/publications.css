@@ -3,29 +3,66 @@
 }
 
 .pubs-header {
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 }
 
+/* YEAR divider row */
+.pub-year {
+  margin: 28px 0 10px 0;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #1f2a44;
+}
+
+/* Publication item: date (with timeline) + content */
 .pub-item {
   display: grid;
-  grid-template-columns: 120px 1fr 220px; /* date | text | image */
-  column-gap: 26px;
-  row-gap: 6px;
+  grid-template-columns: 160px 1fr; /* date | content */
+  column-gap: 28px;
   align-items: start;
+
   padding: 18px 0;
-  border-top: 1px solid rgba(0,0,0,0.12);
+  border-top: 1px solid rgba(0,0,0,0.10);
 }
 
+/* Left column (date + timeline visuals) */
 .pub-date {
-  font-weight: 800;
+  position: relative;
+  padding-right: 18px;
+  font-weight: 900;
   font-size: 1.25rem;
   color: #1f2a44;
   white-space: nowrap;
 }
 
+/* vertical line */
+.pub-date::after {
+  content: "";
+  position: absolute;
+  top: -18px;     /* extends above item */
+  bottom: -18px;  /* extends below item */
+  right: 4px;
+  width: 4px;
+  background: #cbbda9; /* beige line like your screenshot */
+  border-radius: 3px;
+}
+
+/* dot */
+.pub-date::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -2px;   /* centers dot on the line */
+  width: 14px;
+  height: 14px;
+  background: #cbbda9;
+  border-radius: 50%;
+}
+
+/* Right column content */
 .pub-title {
-  font-weight: 800;
-  font-size: 1.15rem;
+  font-weight: 900;
+  font-size: 1.18rem;
   line-height: 1.35;
   margin: 0 0 10px 0;
 }
@@ -47,7 +84,7 @@
 
 .pub-journal {
   margin: 0;
-  font-weight: 700;
+  font-weight: 800;
   color: #111;
 }
 
@@ -56,30 +93,19 @@
   color: #444;
 }
 
-.pub-fig {
-  justify-self: end;
-}
-
-.pub-fig img {
-  width: 220px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  border: 1px solid rgba(0,0,0,0.12);
-}
-
 /* Mobile */
 @media (max-width: 900px) {
   .pub-item {
     grid-template-columns: 1fr;
+    row-gap: 10px;
   }
 
-  .pub-fig {
-    justify-self: start;
+  .pub-date {
+    padding-right: 0;
   }
 
-  .pub-fig img {
-    width: 100%;
-    max-width: 420px;
+  .pub-date::after,
+  .pub-date::before {
+    display: none; /* hide timeline on small screens (optional) */
   }
 }
