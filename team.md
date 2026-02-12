@@ -28,13 +28,18 @@ subtitle: "Lab Members"
 
   <!-- Row 2 / Right -->
   <div class="team2-exp-list">
-    <ul class="team2-list">
-      <li class="team2-item">
-        <div class="team2-item-title">Postdoc</div>
-        <p class="team2-item-detail">The Wistar Institute, U.S. · 2022.03–2026.02 · Philadelphia, PA</p>
-      </li>
-    </ul>
-  </div>
+  <ul class="team2-list">
+    <li class="team2-item">
+      <div class="team2-item-title">Assistant Professor</div>
+      <p class="team2-item-detail">2026.03-Current Chungbuk National University, Korea </p>
+    </li>
+
+    <li class="team2-item">
+      <div class="team2-item-title">Postdoc</div>
+      <p class="team2-item-detail">2022.03–2026.02 The Wistar Institute, U.S. </p>
+    </li>
+  </ul>
+</div>
 
   <!-- Row 3 / Left -->
   <div class="team2-label team2-edu-label">Education</div>
@@ -43,8 +48,13 @@ subtitle: "Lab Members"
   <div class="team2-edu-list">
     <ul class="team2-list">
       <li class="team2-item">
-        <div class="team2-item-title">Ph.D., Biochemistry</div>
-        <p class="team2-item-detail">Kangwon National University, Korea · 2016.09–2022.02 · Korea</p>
+        <div class="team2-item-title">Ph.D. in Biochemistry</div>
+        <p class="team2-item-detail">2016.09–2022.02 Kangwon National University, Korea</p>
+      </li>
+      
+      <li class="team2-item">
+        <div class="team2-item-title">B.S. in Biochemistry</div>
+        <p class="team2-item-detail">2012.03–2016.08 Kangwon National University, Korea</p>
       </li>
     </ul>
   </div>
