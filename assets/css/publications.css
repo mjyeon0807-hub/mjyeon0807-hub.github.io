@@ -1,4 +1,4 @@
-/* Publications: YEAR | LINE | CONTENT (no dots) */
+/* Publications: YEAR | LINE | CONTENT (no dots, no global/pseudo line) */
 
 .pubs-wrap {
   margin-top: 18px;
@@ -8,60 +8,61 @@
   margin-bottom: 22px;
 }
 
-/* Optional: reduce left/right whitespace from theme containers */
-.pubs-wrap .container,
-.pubs-wrap .container-fluid {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+/* IMPORTANT: kill any old timeline pseudo-line if it exists in other CSS */
+.pubs-timeline::before,
+.pubs-timeline::after,
+.pub-date::before,
+.pub-date::after {
+  content: none !important;
+  display: none !important;
 }
 
-/* Timeline list container (no big left padding anymore) */
+/* Timeline list container */
 .pubs-timeline {
   margin-top: 6px;
 }
 
 /* Each publication row: 3 columns */
 .pub-item {
-  display: grid;
-  grid-template-columns: 64px 22px minmax(0, 1fr); /* year | line | content */
-  column-gap: 18px;
+  display: grid !important;
+  grid-template-columns: 64px 22px minmax(0, 1fr) !important; /* year | line | content */
+  column-gap: 16px !important;
   align-items: start;
-
   padding: 18px 0;
 
-  border: 0 !important; /* remove any dividers */
+  border: 0 !important; /* remove dividers */
 }
 
-/* YEAR on the left */
+/* YEAR on the LEFT of the line */
 .pub-year {
   font-weight: 900;
   font-size: 1.15rem;
   color: #1f2a44;
   white-space: nowrap;
-  text-align: right;     /* pushes year toward the line */
+  text-align: right;  /* year hugs the line */
   padding-right: 6px;
 }
 
-/* The vertical line column */
+/* The middle column that contains the vertical line */
 .pub-line {
   position: relative;
   width: 22px;
+  min-height: 100%;
 }
 
-/* Draw the vertical line (continuous within each row).
-   When rows stack, it looks continuous. */
+/* Draw the vertical line inside the middle column */
 .pub-line::before {
   content: "";
   position: absolute;
-  top: -18px;     /* extend above row padding to connect */
-  bottom: -18px;  /* extend below row padding to connect */
-  left: 9px;      /* center the 4px line inside 22px */
+  top: -18px;     /* extend to connect with previous item */
+  bottom: -18px;  /* extend to connect with next item */
+  left: 9px;      /* center 4px line inside 22px col */
   width: 4px;
   background: #cbbda9;
   border-radius: 3px;
 }
 
-/* Hide any old date markup */
+/* Hide any old month-year field if still in HTML */
 .pub-date {
   display: none !important;
 }
@@ -100,11 +101,11 @@
   color: #444;
 }
 
-/* Mobile: simplify */
+/* Mobile: stack and hide the line column */
 @media (max-width: 900px) {
   .pub-item {
-    grid-template-columns: 1fr;
-    row-gap: 8px;
+    grid-template-columns: 1fr !important;
+    row-gap: 8px !important;
   }
 
   .pub-year {
@@ -113,6 +114,6 @@
   }
 
   .pub-line {
-    display: none;
+    display: none !important;
   }
 }
