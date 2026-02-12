@@ -4,6 +4,7 @@ title: "Publications"
 subtitle: "Selected Publications"
 ---
 
+<!-- Ensure CSS is loaded (works regardless of theme setup) -->
 <link rel="stylesheet" href="/assets/css/publications.css">
 
 <div class="pubs-wrap">
@@ -12,6 +13,10 @@ subtitle: "Selected Publications"
     (For the full list, see <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>.)</p>
   </div>
 
+  <!-- YEAR -->
+  <div class="pub-year">2025</div>
+
+  <!-- Publication -->
   <div class="pub-item">
     <div class="pub-date">Aug 2025</div>
 
@@ -30,11 +35,48 @@ subtitle: "Selected Publications"
         Nature Medicine <span>(2025)</span>
       </p>
     </div>
+  </div>
 
-    <div class="pub-fig">
-      <a href="https://journal-link-here.example.com" target="_blank" rel="noopener">
-        <img src="/assets/img/pubs/kidney-proteogenomics.png" alt="Figure thumbnail for paper 1">
-      </a>
+  <div class="pub-item">
+    <div class="pub-date">May 2025</div>
+
+    <div class="pub-text">
+      <h3 class="pub-title">
+        <a href="https://journal-link-2.example.com" target="_blank" rel="noopener">
+          Analysis of individual patient pathway coordination in a cross-species single-cell kidney atlas
+        </a>
+      </h3>
+
+      <p class="pub-authors">
+        Author A^, Author B^, <strong>Eunji Ha</strong>, ...
+      </p>
+
+      <p class="pub-journal">
+        Nature Genetics <span>(2025)</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- YEAR -->
+  <div class="pub-year">2024</div>
+
+  <div class="pub-item">
+    <div class="pub-date">Nov 2024</div>
+
+    <div class="pub-text">
+      <h3 class="pub-title">
+        <a href="https://journal-link-3.example.com" target="_blank" rel="noopener">
+          Paper title from 2024
+        </a>
+      </h3>
+
+      <p class="pub-authors">
+        Author A, Author B, <strong>Eunji Ha</strong>, ...
+      </p>
+
+      <p class="pub-journal">
+        Journal Name <span>(2024)</span>
+      </p>
     </div>
   </div>
 </div>
