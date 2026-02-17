@@ -26,19 +26,38 @@ layout: null
 
 /* --- General --- */
 
-/* Site-wide header image (above page title) */
+/* ==========================================================================
+   FULL-WIDTH ALIGNMENT HELPERS (NEW)
+   Use the same padding for header + page contents so they line up.
+   ========================================================================== */
+
+.fullwidth-pad {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+@media (max-width: 768px) {
+  .fullwidth-pad {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Site-wide header image (above page title) - FULL WIDTH (NEW) */
 .site-header-image {
   margin: 10px 0 18px 0;
 }
 
 .site-header-image img {
   width: 100%;
-  max-width: 980px; /* change to 1200px if you want wider */
+  max-width: none;   /* IMPORTANT: remove the previous 980px limit */
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0;         /* IMPORTANT: do not auto-center (can make it look narrower) */
   border-radius: 10px; /* optional */
 }
+
+/* --- Existing styles continue --- */
 
 html {
   font-size: 100%
