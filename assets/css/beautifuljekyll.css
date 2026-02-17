@@ -26,6 +26,20 @@ layout: null
 
 /* --- General --- */
 
+/* Site-wide header image (above page title) */
+.site-header-image {
+  margin: 10px 0 18px 0;
+}
+
+.site-header-image img {
+  width: 100%;
+  max-width: 980px; /* change to 1200px if you want wider */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px; /* optional */
+}
+
 html {
   font-size: 100%
 }
