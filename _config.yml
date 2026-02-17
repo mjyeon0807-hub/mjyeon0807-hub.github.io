@@ -130,3 +130,6 @@ plugins:
 site-css:
   - "/assets/css/custom.css"
   - "/assets/css/team.css"
+
+site_header_image: "/assets/img/site/header.jpg"
+site_header_image_alt: "Site header image"
