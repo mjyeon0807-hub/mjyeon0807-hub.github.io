@@ -131,5 +131,5 @@ site-css:
   - "/assets/css/custom.css"
   - "/assets/css/team.css"
 
-site_header_image: "/assets/img/header.png"
+site_header_image: "/assets/img/header-2.png"
 site_header_image_alt: "Site header image"
