@@ -1,16 +1,13 @@
 <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
 
   {%- comment -%}
-  Brand/logo in the beige navbar.
-  Uses site.title-img if set in _config.yml.
-  Recommended: set site.title-img to a logo image (PNG/SVG) to show here.
+  Top banner request:
+  - We will NOT show a small logo image here.
+  - The "header-2.png" image should cover the entire navbar via CSS background.
+  So this navbar uses text brand only.
   {%- endcomment -%}
 
-  {%- if site.title-img -%}
-    <a class="navbar-brand navbar-brand-logo" href="{{ '/' | absolute_url }}">
-      <img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url }}" />
-    </a>
-  {%- elsif site.title -%}
+  {%- if site.title -%}
     <a class="navbar-brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
   {%- endif -%}
 
