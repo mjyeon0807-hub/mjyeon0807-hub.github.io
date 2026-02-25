@@ -98,3 +98,10 @@
     padding-bottom: 10px !important;
   }
 }
+
+/* DEBUG: if you don't see a thick red border, custom.css isn't loading */
+.navbar-custom {
+  outline: 6px solid red !important;
+}
+
+background-image: url({{ "/assets/img/header-2.png" | relative_url }}) !important;
