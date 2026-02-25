@@ -7,7 +7,7 @@
 /* --- Navbar banner background --- */
 .navbar-custom {
   /* Use header-2.png as the top cover image */
-  background-image: url("/assets/img/header-2.png") !important;
+  background-image: url({{ "/assets/img/header-2.png" | relative_url }}) !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
