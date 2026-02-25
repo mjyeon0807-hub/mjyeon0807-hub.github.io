@@ -25,6 +25,11 @@ navbar-links:
   News: "news"
   Contact: "contact"
 
+  <a class="navbar-brand navbar-brand-logo" href="{{ '/' | relative_url }}">
+  <img src="{{ site.navbar-logo | relative_url }}" alt="{{ site.navbar-logo-alt | default: site.title }}">
+  <span class="navbar-brand-text">{{ site.title }}</span>
+</a>
+
 #####################################
 # --- Footer social media links --- #
 #####################################
