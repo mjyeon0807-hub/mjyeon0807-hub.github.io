@@ -1158,6 +1158,10 @@ pre {
   }
 }
 
+.navbar-custom .navbar-brand-logo img {
+  outline: 3px solid red;
+}
+
 /* --- Mobile-friendly tweaks --- */
 img {
   max-width: 100%;
