@@ -1,83 +1,100 @@
-/* ===== Navbar: white background + large banner logo ===== */
+/* ==========================================================================
+   Custom overrides (Yeon Lab)
+   Goal: Use /assets/img/header-2.png as a FULL top banner (navbar background),
+         not as a small logo image. Keep menu readable.
+   ========================================================================== */
 
-/* White navbar background */
+/* --- Navbar banner background --- */
 .navbar-custom {
-  background-color: #ffffff !important;
-  background-image: none !important;
+  /* Use header-2.png as the top cover image */
+  background-image: url("/assets/img/header-2.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+
+  /* Banner height (adjust if you want taller/shorter) */
+  min-height: 130px;
+
+  /* Clean look */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
 
-/* Optional: slightly lighter border */
-.navbar-custom {
-  border-bottom: 1px solid #e6e6e6 !important;
+/* Dark overlay so white text is readable on the image */
+.navbar-custom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
 }
 
-/* If a logo image exists, make it big like a banner */
-.navbar-custom .navbar-brand.navbar-brand-logo {
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  margin-right: 18px !important;
+/* Ensure navbar content is above the overlay */
+.navbar-custom > * {
+  position: relative;
+  z-index: 1;
 }
 
-/* Make the image itself larger */
-.navbar-custom .navbar-brand-logo img {
-  height: 72px !important;   /* increase/decrease (60-90px) */
-  width: auto !important;
-  max-height: none !important;
+/* Brand + links readable on the banner */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link,
+.navbar-custom .navbar-toggler {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+  font-weight: 800;
 }
 
-/* Ensure navbar content aligns vertically with taller logo */
+/* Make sure the hamburger icon is visible (bootstrap uses a background-image) */
+.navbar-custom .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+.navbar-custom .navbar-toggler-icon {
+  filter: invert(1) contrast(2);
+}
+
+/* Spacing inside the taller banner */
 .navbar-custom,
 .navbar-custom.top-nav-short,
 .navbar-custom.top-nav-short-permanent {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
 }
 
-/* Keep the menu items vertically centered */
+/* Align nav links vertically in the banner */
 .navbar-custom .navbar-nav .nav-link {
-  padding-top: 28px !important;   /* tune if you change logo height */
-  padding-bottom: 28px !important;
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
 }
 
-/* Mobile: keep logo smaller so it doesn't take over */
+/* Dropdown menu should remain readable (normal light menu) */
+.navbar-custom .dropdown-menu {
+  background: #ffffff !important;
+}
+.navbar-custom .dropdown-menu .dropdown-item {
+  color: #222 !important;
+  text-shadow: none !important;
+}
+
+/* IMPORTANT: if any old "logo image" markup exists, hide it.
+   (We want background banner only.) */
+.navbar-custom .navbar-brand-logo {
+  display: none !important;
+}
+
+/* --- Mobile tweaks --- */
 @media (max-width: 768px) {
-  .navbar-custom .navbar-brand-logo img {
-    height: 44px !important;
+  .navbar-custom {
+    min-height: 90px;
+  }
+
+  .navbar-custom,
+  .navbar-custom.top-nav-short,
+  .navbar-custom.top-nav-short-permanent {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
 
   .navbar-custom .navbar-nav .nav-link {
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
-  }
-}
-
-/* Mobile navbar fix: prevent logo + long title overlap */
-
-/* Make the navbar brand area behave nicely */
-.navbar .navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0; /* allows text to shrink instead of forcing overflow */
-}
-
-/* Ensure logo never grows too large */
-.navbar .navbar-brand img {
-  max-height: 36px;
-  width: auto;
-  height: auto;
-}
-
-/* On phones: hide the long title text so it doesn't collide with the logo */
-@media (max-width: 576px) {
-  .navbar .navbar-brand {
-    max-width: calc(100% - 60px); /* leave room for hamburger button */
-  }
-
-  /* Hide the title text, keep the logo */
-  .navbar .navbar-brand span,
-  .navbar .navbar-brand .site-title,
-  .navbar .navbar-brand .navbar-brand-title {
-    display: none !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
 }
