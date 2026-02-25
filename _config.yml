@@ -26,9 +26,6 @@ navbar-links:
   News: "news"
   Contact: "contact"
 
-navbar-logo: "/assets/img/header-2.png"
-navbar-logo-alt: "Site logo"
-
 #####################################
 # --- Footer social media links --- #
 #####################################
@@ -135,5 +132,3 @@ site-css:
   - "/assets/css/custom.css"
   - "/assets/css/team.css"
 
-site_header_image: "/assets/img/header-2.png"
-site_header_image_alt: "Site header image"
