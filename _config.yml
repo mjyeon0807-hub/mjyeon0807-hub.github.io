@@ -18,7 +18,7 @@ baseurl: ""
 ###############################################
 
 navbar-links:
-  Home: ""
+  Home: "/"
   Team: "team"
   Research: "research"
   Publications: "publications"
