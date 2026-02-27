@@ -1,106 +1,28 @@
-/* ==========================================================================
-   Yeon Lab - custom overrides
-   Goal:
-   - Use /assets/img/header-2.png as a FULL top banner (navbar background)
-   - Keep menu readable on top of the image
-   - Do NOT show a small logo image in the navbar
-   ========================================================================== */
-
-/* === Navbar banner background (force wins over theme) === */
-nav.navbar.navbar-custom,
-nav.navbar.navbar-custom.top-nav-regular,
-nav.navbar.navbar-custom.top-nav-short,
-nav.navbar.navbar-custom.top-nav-short-permanent {
-  /* Reset any theme background first */
-  background-color: transparent !important;
-  background-image: none !important;
-
-  /* Banner image */
-  background-image: url("/assets/img/header-2.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-
-  /* Banner height */
-  min-height: 130px !important;
-
-  /* Clean bottom border */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+/* =========================
+   1) Remove the white line / borders / shadows on the top banner
+   ========================= */
+nav.navbar.navbar-custom {
+  border-top: 0 !important;
+  box-shadow: none !important;
 }
 
-/* Dark overlay so white text is readable */
-nav.navbar.navbar-custom::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  pointer-events: none;
-}
+/* If you also don't want the thin line UNDER the banner, uncomment:
+nav.navbar.navbar-custom { border-bottom: 0 !important; }
+*/
 
-/* Ensure navbar content sits above overlay */
-nav.navbar.navbar-custom > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Brand + links readable on the banner */
-nav.navbar.navbar-custom .navbar-brand,
-nav.navbar.navbar-custom .navbar-nav .nav-link,
-nav.navbar.navbar-custom .navbar-toggler {
-  color: #ffffff !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
-  font-weight: 800;
-}
-
-/* Toggler visibility on dark banner */
-nav.navbar.navbar-custom .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.55) !important;
-}
-nav.navbar.navbar-custom .navbar-toggler-icon {
-  filter: invert(1) contrast(2);
-}
-
-/* Spacing inside the banner */
-nav.navbar.navbar-custom,
-nav.navbar.navbar-custom.top-nav-regular,
-nav.navbar.navbar-custom.top-nav-short,
-nav.navbar.navbar-custom.top-nav-short-permanent {
+/* =========================
+   2) Stop "jumping" when scrolling (disable navbar shrinking)
+   Beautiful Jekyll adds .top-nav-short after you scroll.
+   Force the same padding/height for both states.
+   ========================= */
+nav.navbar.navbar-custom.top-nav-short {
+  min-height: 130px !important;     /* match your normal banner height */
   padding-top: 18px !important;
   padding-bottom: 18px !important;
 }
 
-nav.navbar.navbar-custom .navbar-nav .nav-link {
+/* Keep menu link padding consistent too */
+nav.navbar.navbar-custom.top-nav-short .navbar-nav .nav-link {
   padding-top: 18px !important;
   padding-bottom: 18px !important;
-}
-
-/* Dropdown should stay readable (light dropdown) */
-nav.navbar.navbar-custom .dropdown-menu {
-  background: #ffffff !important;
-}
-nav.navbar.navbar-custom .dropdown-menu .dropdown-item {
-  color: #222 !important;
-  text-shadow: none !important;
-}
-
-/* Hide old logo-image brand (we want banner background only) */
-nav.navbar.navbar-custom .navbar-brand-logo {
-  display: none !important;
-}
-
-/* Mobile tweaks */
-@media (max-width: 768px) {
-  nav.navbar.navbar-custom,
-  nav.navbar.navbar-custom.top-nav-regular,
-  nav.navbar.navbar-custom.top-nav-short,
-  nav.navbar.navbar-custom.top-nav-short-permanent {
-    min-height: 90px !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-  }
-
-  nav.navbar.navbar-custom .navbar-nav .nav-link {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-  }
 }
