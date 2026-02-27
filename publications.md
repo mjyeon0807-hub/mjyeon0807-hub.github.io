@@ -6,4 +6,4 @@ subtitle: "Selected Publications"
 
 <link rel="stylesheet" href="/assets/css/publications.css">
 
-{% include render_publications_from_bib.html %}
+{% include publications_timeline.html %}
