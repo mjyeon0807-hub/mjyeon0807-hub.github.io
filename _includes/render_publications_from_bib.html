@@ -1,0 +1,97 @@
+{%- comment -%}
+Renders a publications timeline from a BibTeX file stored at /assets/data/publications.bib.
+
+Notes:
+- This is a lightweight BibTeX parser implemented in Liquid.
+- It supports basic @article entries and fields: title, author, journal, year, volume, number, pages.
+- For best results, keep each entry’s fields on single lines as in the provided BibTeX.
+{%- endcomment -%}
+
+{%- assign bib = site.static_files | where: "path", "/assets/data/publications.bib" | first -%}
+{%- if bib == nil -%}
+  <p><strong>Error:</strong> Could not find <code>/assets/data/publications.bib</code>.</p>
+{%- else -%}
+  {%- capture bibtext -%}{% include_relative ../assets/data/publications.bib %}{%- endcapture -%}
+
+  {%- assign entries = bibtext | split: "@article" -%}
+  {%- assign pubs = "" | split: "" -%}
+
+  {%- for raw in entries -%}
+    {%- assign t = raw | strip -%}
+    {%- if t == "" -%}{% continue %}{%- endif -%}
+
+    {%- assign block = "@article" | append: t -%}
+
+    {%- assign year = block | split: "year={" | last | split: "}" | first | strip -%}
+    {%- assign title = block | split: "title={" | last | split: "}" | first | strip -%}
+    {%- assign authors = block | split: "author={" | last | split: "}" | first | strip -%}
+    {%- assign journal = block | split: "journal={" | last | split: "}" | first | strip -%}
+    {%- assign volume = block | split: "volume={" | last | split: "}" | first | strip -%}
+    {%- assign number = block | split: "number={" | last | split: "}" | first | strip -%}
+    {%- assign pages = block | split: "pages={" | last | split: "}" | first | strip -%}
+
+    {%- if year == block -%}{%- assign year = "" -%}{%- endif -%}
+    {%- if title == block -%}{%- assign title = "" -%}{%- endif -%}
+    {%- if authors == block -%}{%- assign authors = "" -%}{%- endif -%}
+    {%- if journal == block -%}{%- assign journal = "" -%}{%- endif -%}
+    {%- if volume == block -%}{%- assign volume = "" -%}{%- endif -%}
+    {%- if number == block -%}{%- assign number = "" -%}{%- endif -%}
+    {%- if pages == block -%}{%- assign pages = "" -%}{%- endif -%}
+
+    {%- comment -%}
+    Build a compact string record: year|||title|||authors|||journal|||volume|||number|||pages
+    {%- endcomment -%}
+    {%- capture rec -%}{{ year }}|||{{ title }}|||{{ authors }}|||{{ journal }}|||{{ volume }}|||{{ number }}|||{{ pages }}{%- endcapture -%}
+    {%- assign pubs = pubs | push: rec -%}
+  {%- endfor -%}
+
+  {%- comment -%}Sort by year desc (string sort works for 4-digit years){%- endcomment -%}
+  {%- assign pubs_sorted = pubs | sort | reverse -%}
+
+  <div class="pubs2-wrap">
+    <div class="pubs2-header">
+      <p>
+        ^: first authors, *: corresponding authors<br>
+        (For the full list, see
+        <a href="https://scholar.google.com/citations?user=H9L46kUAAAAJ&hl=en&view_op=list_works&sortby=pubdate"
+           target="_blank" rel="noopener">Google Scholar</a>.)
+      </p>
+    </div>
+
+    <div class="pubs2-timeline">
+      {%- for rec in pubs_sorted -%}
+        {%- assign parts = rec | split: "|||" -%}
+        {%- assign year = parts[0] | strip -%}
+        {%- assign title = parts[1] | strip -%}
+        {%- assign authors = parts[2] | strip -%}
+        {%- assign journal = parts[3] | strip -%}
+        {%- assign volume = parts[4] | strip -%}
+        {%- assign number = parts[5] | strip -%}
+        {%- assign pages = parts[6] | strip -%}
+
+        <div class="pubs2-item">
+          <div class="pubs2-year">{{ year }}</div>
+          <div class="pubs2-line"></div>
+
+          <div class="pubs2-text">
+            <h3 class="pubs2-title">{{ title }}</h3>
+
+            {%- if authors != "" -%}
+              <p class="pubs2-authors">
+                {{ authors | replace: " and ", ", " }}
+              </p>
+            {%- endif -%}
+
+            <p class="pubs2-journal">
+              {%- if journal != "" -%}{{ journal }}{%- endif -%}
+              {%- if volume != "" -%} <span>{{ volume }}</span>{%- endif -%}
+              {%- if number != "" -%} <span>({{ number }})</span>{%- endif -%}
+              {%- if pages != "" -%} <span>: {{ pages }}</span>{%- endif -%}
+              {%- if year != "" -%} <span>({{ year }})</span>{%- endif -%}
+            </p>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
