@@ -1,12 +1,29 @@
 /* ==========================================================================
    Yeon Lab — custom overrides
-   - Navbar uses header image as a full-width banner (cover)
-   - Text is readable on top of the image
-   - Navbar text (brand + menu) ~50% bigger
-   - Hide any logo-image brand (we want banner background only)
+   Goals
+   - Navbar uses /assets/img/header-2.png as a full-width banner background
+   - Keep menu readable on top of the image
+   - Hide any logo-image brand (banner background only)
+   - Fix banner vs page-title overlap (add spacing below fixed navbar)
+   - Unify left/right spacing across pages (consistent max-width + padding)
    ========================================================================== */
 
-/* ---------- Banner navbar background (force override) ---------- */
+/* =========================
+   Global layout variables
+   ========================= */
+:root {
+  /* Space below fixed navbar before page title/header starts */
+  --yeon-banner-offset-desktop: 175px;
+  --yeon-banner-offset-mobile: 110px;
+
+  /* Unified content width/padding for all pages */
+  --yeon-content-max: 1000px;
+  --yeon-content-pad: 24px;
+}
+
+/* =========================
+   Navbar banner
+   ========================= */
 nav.navbar.navbar-custom,
 nav.navbar.navbar-custom.top-nav-regular,
 nav.navbar.navbar-custom.top-nav-short,
@@ -20,7 +37,7 @@ nav.navbar.navbar-custom.top-nav-short-permanent {
   background-position: center center !important;
   background-repeat: no-repeat !important;
 
-  /* More room for larger text */
+  /* Banner size (desktop default) */
   min-height: 125px !important;
   padding-top: 14px !important;
   padding-bottom: 14px !important;
@@ -28,7 +45,7 @@ nav.navbar.navbar-custom.top-nav-short-permanent {
   border-bottom: 3px solid rgba(0, 0, 0, 0.12) !important;
 }
 
-/* Overlay for readability */
+/* Dark overlay for readability */
 nav.navbar.navbar-custom::before {
   content: "";
   position: absolute;
@@ -43,7 +60,7 @@ nav.navbar.navbar-custom > * {
   z-index: 1;
 }
 
-/* ---------- Text style + size (+~50%) ---------- */
+/* Navbar text styling */
 nav.navbar.navbar-custom .navbar-brand,
 nav.navbar.navbar-custom .navbar-nav .nav-link,
 nav.navbar.navbar-custom .navbar-toggler {
@@ -53,19 +70,19 @@ nav.navbar.navbar-custom .navbar-toggler {
   line-height: 1.1 !important;
 }
 
-/* Brand (“Yeon Lab”) bigger */
+/* Brand (“Yeon Lab”) */
 nav.navbar.navbar-custom .navbar-brand {
   font-size: 1.5rem !important;
 }
 
-/* Menu links bigger */
+/* Menu links */
 nav.navbar.navbar-custom .navbar-nav .nav-link {
   font-size: 1.0rem !important;
   padding-top: 13px !important;
   padding-bottom: 13px !important;
 }
 
-/* ---------- Toggler visibility on banner ---------- */
+/* Toggler visibility */
 nav.navbar.navbar-custom .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.55) !important;
 }
@@ -73,17 +90,7 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   filter: invert(1) contrast(2);
 }
 
-/* More space between the navbar banner and the page header/title */
-:root {
-  --yeon-banner-offset: 175px; /* increase this for more space (try 165–210px) */
-}
-
-header > .intro-header,
-header > .intro-header.big-img {
-  margin-top: var(--yeon-banner-offset) !important;
-}
-
-/* ---------- Dropdown menu (keep light + readable) ---------- */
+/* Dropdown menu readable */
 nav.navbar.navbar-custom .dropdown-menu {
   background: #ffffff !important;
 }
@@ -92,12 +99,45 @@ nav.navbar.navbar-custom .dropdown-menu .dropdown-item {
   text-shadow: none !important;
 }
 
-/* ---------- Hide logo image brand (banner background only) ---------- */
+/* Hide logo image brand */
 nav.navbar.navbar-custom .navbar-brand-logo {
   display: none !important;
 }
 
-/* ---------- Mobile tweaks ---------- */
+/* =========================
+   Fix: banner overlaps page title/header
+   ========================= */
+header > .intro-header,
+header > .intro-header.big-img {
+  margin-top: var(--yeon-banner-offset-desktop) !important;
+}
+
+/* =========================
+   Unify left/right spacing across all pages
+   ========================= */
+main.container-md,
+main.container-fluid {
+  max-width: var(--yeon-content-max) !important;
+  padding-left: var(--yeon-content-pad) !important;
+  padding-right: var(--yeon-content-pad) !important;
+}
+
+/* Prevent Bootstrap rows from escaping the padding */
+main.container-md .row,
+main.container-fluid .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Normalize theme fullwidth padding if present */
+.fullwidth-pad {
+  padding-left: var(--yeon-content-pad) !important;
+  padding-right: var(--yeon-content-pad) !important;
+}
+
+/* =========================
+   Mobile tweaks (ONLY inside this media block)
+   ========================= */
 @media (max-width: 768px) {
   nav.navbar.navbar-custom,
   nav.navbar.navbar-custom.top-nav-regular,
@@ -108,49 +148,20 @@ nav.navbar.navbar-custom .navbar-brand-logo {
     padding-bottom: 10px !important;
   }
 
+  /* If the desktop text feels too big on mobile, reduce a bit */
   nav.navbar.navbar-custom .navbar-brand {
-    font-size: 1.5rem !important;
+    font-size: 1.35rem !important;
   }
 
   nav.navbar.navbar-custom .navbar-nav .nav-link {
-    font-size: 1.05rem !important;
+    font-size: 0.95rem !important;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
   }
-}
 
-:root {
-    --yeon-banner-offset: 110px; /* 95px + ~15px gap */
+  /* Smaller offset below the fixed banner on mobile */
+  header > .intro-header,
+  header > .intro-header.big-img {
+    margin-top: var(--yeon-banner-offset-mobile) !important;
   }
-}
-
-/* =========================
-   Unify left/right spacing across all pages
-   ========================= */
-
-/* Use one consistent content width */
-:root {
-  --yeon-content-max: 1000px; /* change to 1000px / 1200px if you prefer */
-  --yeon-content-pad: 24px;   /* consistent side padding */
-}
-
-/* Beautiful Jekyll wraps content in <main class="container-md ..."> */
-main.container-md,
-main.container-fluid {
-  max-width: var(--yeon-content-max) !important;
-  padding-left: var(--yeon-content-pad) !important;
-  padding-right: var(--yeon-content-pad) !important;
-}
-
-/* Ensure inner rows don’t “escape” the padding */
-main.container-md .row,
-main.container-fluid .row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* If any page uses the theme's fullwidth-pad, normalize it too */
-.fullwidth-pad {
-  padding-left: var(--yeon-content-pad) !important;
-  padding-right: var(--yeon-content-pad) !important;
 }
