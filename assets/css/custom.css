@@ -22,10 +22,10 @@ nav.navbar.navbar-custom.top-nav-short-permanent {
 
   /* More room for larger text */
   min-height: 170px !important;
-  padding-top: 26px !important;
-  padding-bottom: 26px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.12) !important;
 }
 
 /* Overlay for readability */
@@ -55,14 +55,14 @@ nav.navbar.navbar-custom .navbar-toggler {
 
 /* Brand (“Yeon Lab”) bigger */
 nav.navbar.navbar-custom .navbar-brand {
-  font-size: 1.35rem !important;
+  font-size: 1.5rem !important;
 }
 
 /* Menu links bigger */
 nav.navbar.navbar-custom .navbar-nav .nav-link {
-  font-size: 1rem !important;
-  padding-top: 18px !important;
-  padding-bottom: 18px !important;
+  font-size: 1.2rem !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
 }
 
 /* ---------- Toggler visibility on banner ---------- */
