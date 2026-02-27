@@ -60,7 +60,7 @@ nav.navbar.navbar-custom .navbar-brand {
 
 /* Menu links bigger */
 nav.navbar.navbar-custom .navbar-nav .nav-link {
-  font-size: 1.2rem !important;
+  font-size: 1.0rem !important;
   padding-top: 13px !important;
   padding-bottom: 13px !important;
 }
@@ -71,6 +71,16 @@ nav.navbar.navbar-custom .navbar-toggler {
 }
 nav.navbar.navbar-custom .navbar-toggler-icon {
   filter: invert(1) contrast(2);
+}
+
+/* More space between the navbar banner and the page header/title */
+:root {
+  --yeon-banner-offset: 175px; /* increase this for more space (try 165–210px) */
+}
+
+header > .intro-header,
+header > .intro-header.big-img {
+  margin-top: var(--yeon-banner-offset) !important;
 }
 
 /* ---------- Dropdown menu (keep light + readable) ---------- */
