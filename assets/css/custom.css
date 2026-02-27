@@ -1,42 +1,34 @@
 /* ==========================================================================
    Yeon Lab — custom overrides
+   - Navbar uses header image as a full-width banner (cover)
+   - Text is readable on top of the image
+   - Navbar text (brand + menu) ~50% bigger
+   - Hide any logo-image brand (we want banner background only)
    ========================================================================== */
 
-/* =========================
-   Global layout variables
-   ========================= */
-:root {
-  /* Space below fixed navbar before page title/header starts */
-  --yeon-banner-offset-desktop: 175px;
-  --yeon-banner-offset-mobile: 110px;
-
-  /* CONTENT width/padding (do NOT use this to shrink the whole page) */
-  --yeon-content-max: 1100px;
-  --yeon-content-pad: 24px;
-}
-
-/* =========================
-   Navbar banner (FULL WIDTH)
-   ========================= */
+/* ---------- Banner navbar background (force override) ---------- */
 nav.navbar.navbar-custom,
 nav.navbar.navbar-custom.top-nav-regular,
 nav.navbar.navbar-custom.top-nav-short,
 nav.navbar.navbar-custom.top-nav-short-permanent {
+  /* Reset theme background */
   background: none !important;
 
+  /* Banner image */
   background-image: url("/assets/img/header-2.png") !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
 
-  min-height: 125px !important;
-  padding-top: 14px !important;
-  padding-bottom: 14px !important;
+  /* More room for larger text */
+  min-height: 170px !important;
+  padding-top: 26px !important;
+  padding-bottom: 26px !important;
 
-  border-bottom: 3px solid rgba(0, 0, 0, 0.12) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
 
-/* Dark overlay for readability */
+/* Overlay for readability */
 nav.navbar.navbar-custom::before {
   content: "";
   position: absolute;
@@ -51,7 +43,7 @@ nav.navbar.navbar-custom > * {
   z-index: 1;
 }
 
-/* Navbar text styling */
+/* ---------- Text style + size (+~50%) ---------- */
 nav.navbar.navbar-custom .navbar-brand,
 nav.navbar.navbar-custom .navbar-nav .nav-link,
 nav.navbar.navbar-custom .navbar-toggler {
@@ -61,19 +53,19 @@ nav.navbar.navbar-custom .navbar-toggler {
   line-height: 1.1 !important;
 }
 
-/* Brand (“Yeon Lab”) */
+/* Brand (“Yeon Lab”) bigger */
 nav.navbar.navbar-custom .navbar-brand {
-  font-size: 1.5rem !important;
+  font-size: 2.1rem !important;
 }
 
-/* Menu links */
+/* Menu links bigger */
 nav.navbar.navbar-custom .navbar-nav .nav-link {
-  font-size: 1.0rem !important;
-  padding-top: 13px !important;
-  padding-bottom: 13px !important;
+  font-size: 1.35rem !important;
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
 }
 
-/* Toggler visibility */
+/* ---------- Toggler visibility on banner ---------- */
 nav.navbar.navbar-custom .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.55) !important;
 }
@@ -81,7 +73,7 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   filter: invert(1) contrast(2);
 }
 
-/* Dropdown menu readable */
+/* ---------- Dropdown menu (keep light + readable) ---------- */
 nav.navbar.navbar-custom .dropdown-menu {
   background: #ffffff !important;
 }
@@ -90,77 +82,29 @@ nav.navbar.navbar-custom .dropdown-menu .dropdown-item {
   text-shadow: none !important;
 }
 
-/* Hide logo image brand */
+/* ---------- Hide logo image brand (banner background only) ---------- */
 nav.navbar.navbar-custom .navbar-brand-logo {
   display: none !important;
 }
 
-/* =========================
-   Fix: banner overlaps page title/header
-   ========================= */
-header > .intro-header,
-header > .intro-header.big-img {
-  margin-top: var(--yeon-banner-offset-desktop) !important;
-}
-
-/* =========================
-   Unify left/right spacing across all pages (CONTENT ONLY)
-   IMPORTANT:
-   - Keep the page full-width so the navbar doesn't collapse early.
-   - Center only the content inside <main>.
-   ========================= */
-main.container-md,
-main.container-fluid {
-  max-width: 100% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/* Center all direct children of <main> with consistent width/padding */
-main.container-md > *,
-main.container-fluid > * {
-  max-width: var(--yeon-content-max);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--yeon-content-pad);
-  padding-right: var(--yeon-content-pad);
-}
-
-/* Normalize theme helper class if present */
-.fullwidth-pad {
-  padding-left: var(--yeon-content-pad) !important;
-  padding-right: var(--yeon-content-pad) !important;
-}
-
-/* =========================
-   Mobile tweaks
-   ========================= */
+/* ---------- Mobile tweaks ---------- */
 @media (max-width: 768px) {
   nav.navbar.navbar-custom,
   nav.navbar.navbar-custom.top-nav-regular,
   nav.navbar.navbar-custom.top-nav-short,
   nav.navbar.navbar-custom.top-nav-short-permanent {
-    min-height: 95px !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    min-height: 110px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
   }
 
   nav.navbar.navbar-custom .navbar-brand {
-    font-size: 1.35rem !important;
+    font-size: 1.5rem !important;
   }
 
   nav.navbar.navbar-custom .navbar-nav .nav-link {
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
-  }
-
-  header > .intro-header,
-  header > .intro-header.big-img {
-    margin-top: var(--yeon-banner-offset-mobile) !important;
-  }
-
-  :root {
-    --yeon-content-pad: 16px;
   }
 }
