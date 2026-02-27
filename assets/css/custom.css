@@ -1,19 +1,18 @@
 /* ==========================================================================
-   Yeon Lab - custom overrides
-   Goal:
-   - Use /assets/img/header-2.png as a FULL top banner (navbar background)
-   - Keep menu readable on top of the image
-   - Do NOT show a small logo image in the navbar
+   Yeon Lab — custom overrides
+   - Navbar uses header image as a full-width banner (cover)
+   - Text is readable on top of the image
+   - Navbar text (brand + menu) ~50% bigger
+   - Hide any logo-image brand (we want banner background only)
    ========================================================================== */
 
-/* === Navbar banner background (force wins over theme) === */
+/* ---------- Banner navbar background (force override) ---------- */
 nav.navbar.navbar-custom,
 nav.navbar.navbar-custom.top-nav-regular,
 nav.navbar.navbar-custom.top-nav-short,
 nav.navbar.navbar-custom.top-nav-short-permanent {
-  /* Reset any theme background first */
-  background-color: transparent !important;
-  background-image: none !important;
+  /* Reset theme background */
+  background: none !important;
 
   /* Banner image */
   background-image: url("/assets/img/header-2.png") !important;
@@ -21,14 +20,15 @@ nav.navbar.navbar-custom.top-nav-short-permanent {
   background-position: center center !important;
   background-repeat: no-repeat !important;
 
-  /* Banner height */
-  min-height: 130px !important;
+  /* More room for larger text */
+  min-height: 170px !important;
+  padding-top: 26px !important;
+  padding-bottom: 26px !important;
 
-  /* Clean bottom border */
   border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
 
-/* Dark overlay so white text is readable */
+/* Overlay for readability */
 nav.navbar.navbar-custom::before {
   content: "";
   position: absolute;
@@ -37,22 +37,35 @@ nav.navbar.navbar-custom::before {
   pointer-events: none;
 }
 
-/* Ensure navbar content sits above overlay */
+/* Keep navbar contents above overlay */
 nav.navbar.navbar-custom > * {
   position: relative;
   z-index: 1;
 }
 
-/* Brand + links readable on the banner */
+/* ---------- Text style + size (+~50%) ---------- */
 nav.navbar.navbar-custom .navbar-brand,
 nav.navbar.navbar-custom .navbar-nav .nav-link,
 nav.navbar.navbar-custom .navbar-toggler {
   color: #ffffff !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
   font-weight: 800;
+  line-height: 1.1 !important;
 }
 
-/* Toggler visibility on dark banner */
+/* Brand (“Yeon Lab”) bigger */
+nav.navbar.navbar-custom .navbar-brand {
+  font-size: 2.1rem !important;
+}
+
+/* Menu links bigger */
+nav.navbar.navbar-custom .navbar-nav .nav-link {
+  font-size: 1.35rem !important;
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+}
+
+/* ---------- Toggler visibility on banner ---------- */
 nav.navbar.navbar-custom .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.55) !important;
 }
@@ -60,21 +73,7 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   filter: invert(1) contrast(2);
 }
 
-/* Spacing inside the banner */
-nav.navbar.navbar-custom,
-nav.navbar.navbar-custom.top-nav-regular,
-nav.navbar.navbar-custom.top-nav-short,
-nav.navbar.navbar-custom.top-nav-short-permanent {
-  padding-top: 18px !important;
-  padding-bottom: 18px !important;
-}
-
-nav.navbar.navbar-custom .navbar-nav .nav-link {
-  padding-top: 18px !important;
-  padding-bottom: 18px !important;
-}
-
-/* Dropdown should stay readable (light dropdown) */
+/* ---------- Dropdown menu (keep light + readable) ---------- */
 nav.navbar.navbar-custom .dropdown-menu {
   background: #ffffff !important;
 }
@@ -83,24 +82,32 @@ nav.navbar.navbar-custom .dropdown-menu .dropdown-item {
   text-shadow: none !important;
 }
 
-/* Hide old logo-image brand (we want banner background only) */
+/* ---------- Hide logo image brand (banner background only) ---------- */
 nav.navbar.navbar-custom .navbar-brand-logo {
   display: none !important;
 }
 
-/* Mobile tweaks */
+/* ---------- Mobile tweaks ---------- */
 @media (max-width: 768px) {
   nav.navbar.navbar-custom,
   nav.navbar.navbar-custom.top-nav-regular,
   nav.navbar.navbar-custom.top-nav-short,
   nav.navbar.navbar-custom.top-nav-short-permanent {
-    min-height: 90px !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    min-height: 110px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  nav.navbar.navbar-custom .navbar-brand {
+    font-size: 1.5rem !important;
   }
 
   nav.navbar.navbar-custom .navbar-nav .nav-link {
+    font-size: 1.05rem !important;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
   }
 }
+/* Space between the fixed top banner and the page header area */
+header.intro-header {
+  margin-top: 25
