@@ -21,9 +21,9 @@ nav.navbar.navbar-custom.top-nav-short-permanent {
   background-repeat: no-repeat !important;
 
   /* More room for larger text */
-  min-height: 170px !important;
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
+  min-height: 125px !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
 
   border-bottom: 3px solid rgba(0, 0, 0, 0.12) !important;
 }
@@ -93,9 +93,9 @@ nav.navbar.navbar-custom .navbar-brand-logo {
   nav.navbar.navbar-custom.top-nav-regular,
   nav.navbar.navbar-custom.top-nav-short,
   nav.navbar.navbar-custom.top-nav-short-permanent {
-    min-height: 110px !important;
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
+    min-height: 95px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
 
   nav.navbar.navbar-custom .navbar-brand {
@@ -106,5 +106,10 @@ nav.navbar.navbar-custom .navbar-brand-logo {
     font-size: 1.05rem !important;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
+  }
+}
+
+:root {
+    --yeon-banner-offset: 110px; /* 95px + ~15px gap */
   }
 }
