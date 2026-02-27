@@ -55,12 +55,12 @@ nav.navbar.navbar-custom .navbar-toggler {
 
 /* Brand (“Yeon Lab”) bigger */
 nav.navbar.navbar-custom .navbar-brand {
-  font-size: 2.1rem !important;
+  font-size: 1.35rem !important;
 }
 
 /* Menu links bigger */
 nav.navbar.navbar-custom .navbar-nav .nav-link {
-  font-size: 1.35rem !important;
+  font-size: 1rem !important;
   padding-top: 18px !important;
   padding-bottom: 18px !important;
 }
@@ -108,6 +108,3 @@ nav.navbar.navbar-custom .navbar-brand-logo {
     padding-bottom: 10px !important;
   }
 }
-/* Space between the fixed top banner and the page header area */
-header.intro-header {
-  margin-top: 25
