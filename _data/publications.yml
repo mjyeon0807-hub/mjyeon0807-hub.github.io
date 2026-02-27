@@ -1,14 +1,3 @@
-- id: yeon2025parkin
-  year: 2025
-  title: "Parkin Induces Ubiquitination and Large Extracellular Vesicle Release of HMGB1 to Activate Antitumor Immunity"
-  authors: "Yeon, Minjeong; Perego, Michela; Elokely, Khaled M; Abou-Gharbia, Magid; Childers, Wayne E; Milcarek, Andrew T; Bertolini, Irene; Tang, Hsin-Yao; Languino, Lucia R; Stein, Gary S; others"
-  journal: "Cancer Research"
-  volume: "85"
-  number: "24"
-  pages: "5033–5048"
-  doi: ""
-  url: ""
-
 - id: perego2025parkin
   year: 2025
   title: "Parkin activates innate immunity and promotes antitumor immune responses"
@@ -20,6 +9,17 @@
   doi: ""
   url: ""
 
+- id: yeon2025parkin
+  year: 2025
+  title: "Parkin Induces Ubiquitination and Large Extracellular Vesicle Release of HMGB1 to Activate Antitumor Immunity"
+  authors: "Yeon, Minjeong; Perego, Michela; Elokely, Khaled M; Abou-Gharbia, Magid; Childers, Wayne E; Milcarek, Andrew T; Bertolini, Irene; Tang, Hsin-Yao; Languino, Lucia R; Stein, Gary S; others"
+  journal: "Cancer Research"
+  volume: "85"
+  number: "24"
+  pages: "5033–5048"
+  doi: ""
+  url: ""
+
 - id: yeon2024hdac9
   year: 2024
   title: "HDAC9 and miR-512 Regulate CAGE-Promoted Anti-Cancer Drug Resistance and Cellular Proliferation"
@@ -28,17 +28,6 @@
   volume: "46"
   number: "6"
   pages: "5178–5193"
-  doi: ""
-  url: ""
-
-- id: yeon2024kindlin
-  year: 2024
-  title: "Kindlin-2: a novel target of Parkin regulating cancer metastasis"
-  authors: "Yeon, Minjeong; Bertolini, Irene; Altieri, Dario C"
-  journal: "Cancer Research"
-  volume: "84"
-  number: "6_Supplement"
-  pages: "1276–1276"
   doi: ""
   url: ""
 
