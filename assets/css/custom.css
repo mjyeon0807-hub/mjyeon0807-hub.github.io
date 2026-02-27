@@ -1,22 +1,122 @@
-/* =========================
-   Unify left/right spacing across all pages (CONTENT ONLY)
-   Keep navbar full width (so it won't collapse early)
-   ========================= */
+/* ==========================================================================
+   Yeon Lab — custom overrides
+   ========================================================================== */
 
+/* =========================
+   Global layout variables
+   ========================= */
 :root {
-  --yeon-content-max: 1100px; /* content width */
-  --yeon-content-pad: 24px;   /* edge space inside content */
+  /* Space below fixed navbar before page title/header starts */
+  --yeon-banner-offset-desktop: 175px;
+  --yeon-banner-offset-mobile: 110px;
+
+  /* CONTENT width/padding (do NOT use this to shrink the whole page) */
+  --yeon-content-max: 1100px;
+  --yeon-content-pad: 24px;
 }
 
-/* Make <main> full-width, then center an inner wrapper */
+/* =========================
+   Navbar banner (FULL WIDTH)
+   ========================= */
+nav.navbar.navbar-custom,
+nav.navbar.navbar-custom.top-nav-regular,
+nav.navbar.navbar-custom.top-nav-short,
+nav.navbar.navbar-custom.top-nav-short-permanent {
+  background: none !important;
+
+  background-image: url("/assets/img/header-2.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+
+  min-height: 125px !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+
+  border-bottom: 3px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Dark overlay for readability */
+nav.navbar.navbar-custom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+/* Keep navbar contents above overlay */
+nav.navbar.navbar-custom > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Navbar text styling */
+nav.navbar.navbar-custom .navbar-brand,
+nav.navbar.navbar-custom .navbar-nav .nav-link,
+nav.navbar.navbar-custom .navbar-toggler {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+  font-weight: 800;
+  line-height: 1.1 !important;
+}
+
+/* Brand (“Yeon Lab”) */
+nav.navbar.navbar-custom .navbar-brand {
+  font-size: 1.5rem !important;
+}
+
+/* Menu links */
+nav.navbar.navbar-custom .navbar-nav .nav-link {
+  font-size: 1.0rem !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+}
+
+/* Toggler visibility */
+nav.navbar.navbar-custom .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.55) !important;
+}
+nav.navbar.navbar-custom .navbar-toggler-icon {
+  filter: invert(1) contrast(2);
+}
+
+/* Dropdown menu readable */
+nav.navbar.navbar-custom .dropdown-menu {
+  background: #ffffff !important;
+}
+nav.navbar.navbar-custom .dropdown-menu .dropdown-item {
+  color: #222 !important;
+  text-shadow: none !important;
+}
+
+/* Hide logo image brand */
+nav.navbar.navbar-custom .navbar-brand-logo {
+  display: none !important;
+}
+
+/* =========================
+   Fix: banner overlaps page title/header
+   ========================= */
+header > .intro-header,
+header > .intro-header.big-img {
+  margin-top: var(--yeon-banner-offset-desktop) !important;
+}
+
+/* =========================
+   Unify left/right spacing across all pages (CONTENT ONLY)
+   IMPORTANT:
+   - Keep the page full-width so the navbar doesn't collapse early.
+   - Center only the content inside <main>.
+   ========================= */
 main.container-md,
 main.container-fluid {
-  max-width: 100% !important;     /* IMPORTANT: do NOT narrow the whole page */
+  max-width: 100% !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-/* Create consistent centered content width */
+/* Center all direct children of <main> with consistent width/padding */
 main.container-md > *,
 main.container-fluid > * {
   max-width: var(--yeon-content-max);
@@ -26,8 +126,41 @@ main.container-fluid > * {
   padding-right: var(--yeon-content-pad);
 }
 
-/* If Beautiful Jekyll uses .fullwidth-pad anywhere, normalize it */
+/* Normalize theme helper class if present */
 .fullwidth-pad {
   padding-left: var(--yeon-content-pad) !important;
   padding-right: var(--yeon-content-pad) !important;
+}
+
+/* =========================
+   Mobile tweaks
+   ========================= */
+@media (max-width: 768px) {
+  nav.navbar.navbar-custom,
+  nav.navbar.navbar-custom.top-nav-regular,
+  nav.navbar.navbar-custom.top-nav-short,
+  nav.navbar.navbar-custom.top-nav-short-permanent {
+    min-height: 95px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  nav.navbar.navbar-custom .navbar-brand {
+    font-size: 1.35rem !important;
+  }
+
+  nav.navbar.navbar-custom .navbar-nav .nav-link {
+    font-size: 0.95rem !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  header > .intro-header,
+  header > .intro-header.big-img {
+    margin-top: var(--yeon-banner-offset-mobile) !important;
+  }
+
+  :root {
+    --yeon-content-pad: 16px;
+  }
 }
