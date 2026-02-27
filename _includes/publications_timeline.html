@@ -1,17 +1,5 @@
 {%- assign pubs = site.data.publications | sort: "year" | reverse -%}
 
-{%- assign my_last = site.publications_my_last | default: "Yeon" -%}
-{%- assign my_first = site.publications_my_first | default: "Minjeong" -%}
-{%- assign my_variants = site.publications_my_variants | default: "" -%}
-{%- assign my_full_1 = my_last | append: ", " | append: my_first -%}
-
-{%- comment -%}
-If a paper has:
-- url => use it
-- else doi => link to https://doi.org/<doi>
-- else => link to Google Scholar search by title
-{%- endcomment -%}
-
 <div class="pubs2-wrap">
   <div class="pubs2-header">
     <p>
@@ -33,28 +21,23 @@ If a paper has:
         </div>
       {%- endif -%}
 
+      {%- comment -%}
+      Pick link priority:
+      - pub.url
+      - pub.doi (doi.org)
+      - fallback: Google Scholar title search
+      {%- endcomment -%}
       {%- assign link = "" -%}
       {%- if pub.url and pub.url != "" -%}
         {%- assign link = pub.url -%}
       {%- elsif pub.doi and pub.doi != "" -%}
         {%- assign link = "https://doi.org/" | append: pub.doi -%}
       {%- else -%}
-        {%- assign q = pub.title | uri_escape -%}
-        {%- assign link = "https://scholar.google.com/scholar?q=" | append: q -%}
+        {%- assign link = "https://scholar.google.com/scholar?q=" | append: (pub.title | uri_escape) -%}
       {%- endif -%}
 
       {%- assign authors = pub.authors | default: "" -%}
-
-      {%- comment -%}Auto-bold your name in a few common variants{%- endcomment -%}
-      {%- assign authors = authors | replace: my_full_1, "<strong>" | append: my_full_1 | append: "</strong>" -%}
-      {%- assign authors = authors | replace: "<strong>" | append: my_full_1 | append: "</strong>" | append: my_full_1, "<strong>" | append: my_full_1 | append: "</strong>" -%}
-
-      {%- comment -%}
-The above Liquid is clunky because Liquid doesn't support regex replace.
-So instead, we handle bolding with a safer approach:
-- Replace exact "Yeon, Minjeong" and "Yeon, Min Jeong" and "Minjeong Yeon" if present.
-{%- endcomment -%}
-      {%- assign authors = pub.authors | replace: "Yeon, Minjeong", "<strong>Yeon, Minjeong</strong>" -%}
+      {%- assign authors = authors | replace: "Yeon, Minjeong", "<strong>Yeon, Minjeong</strong>" -%}
       {%- assign authors = authors | replace: "Yeon, Min Jeong", "<strong>Yeon, Min Jeong</strong>" -%}
       {%- assign authors = authors | replace: "Minjeong Yeon", "<strong>Minjeong Yeon</strong>" -%}
 
@@ -74,15 +57,12 @@ So instead, we handle bolding with a safer approach:
             {%- if pub.journal and pub.journal != "" -%}
               {{ pub.journal }}
             {%- endif -%}
-
             {%- if pub.volume and pub.volume != "" -%}
               <span> {{ pub.volume }}</span>
             {%- endif -%}
-
             {%- if pub.number and pub.number != "" -%}
               <span>({{ pub.number }})</span>
             {%- endif -%}
-
             {%- if pub.pages and pub.pages != "" -%}
               <span>: {{ pub.pages }}</span>
             {%- endif -%}
