@@ -113,3 +113,34 @@ nav.navbar.navbar-custom .navbar-brand-logo {
     --yeon-banner-offset: 110px; /* 95px + ~15px gap */
   }
 }
+
+/* =========================
+   Unify left/right spacing across all pages
+   ========================= */
+
+/* Use one consistent content width */
+:root {
+  --yeon-content-max: 1100px; /* change to 1000px / 1200px if you prefer */
+  --yeon-content-pad: 22px;   /* consistent side padding */
+}
+
+/* Beautiful Jekyll wraps content in <main class="container-md ..."> */
+main.container-md,
+main.container-fluid {
+  max-width: var(--yeon-content-max) !important;
+  padding-left: var(--yeon-content-pad) !important;
+  padding-right: var(--yeon-content-pad) !important;
+}
+
+/* Ensure inner rows don’t “escape” the padding */
+main.container-md .row,
+main.container-fluid .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* If any page uses the theme's fullwidth-pad, normalize it too */
+.fullwidth-pad {
+  padding-left: var(--yeon-content-pad) !important;
+  padding-right: var(--yeon-content-pad) !important;
+}
