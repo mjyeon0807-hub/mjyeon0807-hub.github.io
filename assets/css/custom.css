@@ -1,8 +1,11 @@
 /* ==========================================================================
-   Yeon Lab — Navbar banner (stable version)
+   Yeon Lab — Navbar banner + header spacing (stable)
+   Fixes:
+   - Keep banner background for ALL navbar states (top-nav-short included)
+   - Prevent home/page titles from hiding under the fixed banner
    ========================================================================== */
 
-/* Banner navbar background */
+/* Banner navbar background (apply to ALL states) */
 nav.navbar.navbar-custom,
 nav.navbar.navbar-custom.top-nav-regular,
 nav.navbar.navbar-custom.top-nav-short,
@@ -14,7 +17,6 @@ nav.navbar.navbar-custom.top-nav-short-permanent {
   background-position: center center !important;
   background-repeat: no-repeat !important;
 
-  /* banner size */
   min-height: 125px !important;
   padding-top: 14px !important;
   padding-bottom: 14px !important;
@@ -47,7 +49,7 @@ nav.navbar.navbar-custom .navbar-toggler {
   line-height: 1.1 !important;
 }
 
-/* sizes */
+/* Sizes */
 nav.navbar.navbar-custom .navbar-brand {
   font-size: 1.6rem !important;
 }
@@ -77,4 +79,43 @@ nav.navbar.navbar-custom .dropdown-menu .dropdown-item {
 /* Hide logo image brand */
 nav.navbar.navbar-custom .navbar-brand-logo {
   display: none !important;
+}
+
+/* =========================
+   Fix: page/home header hiding under the banner
+   ========================= */
+/* Push the header down by (banner height + a small gap) */
+header > .intro-header.big-img {
+  margin-top: 145px !important; /* 125px banner + ~20px gap */
+}
+
+/* Also push non-image headers a bit (some pages use non big-img header) */
+header > .intro-header:not(.big-img) {
+  margin-top: 145px !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  nav.navbar.navbar-custom,
+  nav.navbar.navbar-custom.top-nav-regular,
+  nav.navbar.navbar-custom.top-nav-short,
+  nav.navbar.navbar-custom.top-nav-short-permanent {
+    min-height: 95px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  nav.navbar.navbar-custom .navbar-brand {
+    font-size: 1.35rem !important;
+  }
+  nav.navbar.navbar-custom .navbar-nav .nav-link {
+    font-size: 0.95rem !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  header > .intro-header.big-img,
+  header > .intro-header:not(.big-img) {
+    margin-top: 110px !important; /* 95px + ~15px gap */
+  }
 }
