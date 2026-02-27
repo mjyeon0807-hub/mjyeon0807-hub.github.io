@@ -1,0 +1,131 @@
+- id: yeon2025parkin
+  year: 2025
+  title: "Parkin Induces Ubiquitination and Large Extracellular Vesicle Release of HMGB1 to Activate Antitumor Immunity"
+  authors: "Yeon, Minjeong; Perego, Michela; Elokely, Khaled M; Abou-Gharbia, Magid; Childers, Wayne E; Milcarek, Andrew T; Bertolini, Irene; Tang, Hsin-Yao; Languino, Lucia R; Stein, Gary S; others"
+  journal: "Cancer Research"
+  volume: "85"
+  number: "24"
+  pages: "5033–5048"
+  doi: ""
+  url: ""
+
+- id: perego2025parkin
+  year: 2025
+  title: "Parkin activates innate immunity and promotes antitumor immune responses"
+  authors: "Perego, Michela; Yeon, Minjeong; Agarwal, Ekta; Milcarek, Andrew T; Bertolini, Irene; Camisaschi, Chiara; Ghosh, Jagadish C; Tang, Hsin-Yao; Grandvaux, Nathalie; Ruscetti, Marcus; others"
+  journal: "The Journal of Clinical Investigation"
+  volume: "134"
+  number: "22"
+  pages: ""
+  doi: ""
+  url: ""
+
+- id: yeon2024hdac9
+  year: 2024
+  title: "HDAC9 and miR-512 Regulate CAGE-Promoted Anti-Cancer Drug Resistance and Cellular Proliferation"
+  authors: "Yeon, Minjeong; Kwon, Nayeon; Jeoung, Jaewhoon; Jeoung, Dooil"
+  journal: "Current Issues in Molecular Biology"
+  volume: "46"
+  number: "6"
+  pages: "5178–5193"
+  doi: ""
+  url: ""
+
+- id: yeon2024kindlin
+  year: 2024
+  title: "Kindlin-2: a novel target of Parkin regulating cancer metastasis"
+  authors: "Yeon, Minjeong; Bertolini, Irene; Altieri, Dario C"
+  journal: "Cancer Research"
+  volume: "84"
+  number: "6_Supplement"
+  pages: "1276–1276"
+  doi: ""
+  url: ""
+
+- id: yeon2023parkin
+  year: 2023
+  title: "Parkin ubiquitination of Kindlin-2 enables mitochondria-associated metastasis suppression"
+  authors: "Yeon, Minjeong; Bertolini, Irene; Agarwal, Ekta; Ghosh, Jagadish C; Tang, Hsin-Yao; Speicher, David W; Keeney, Frederick; Sossey-Alaoui, Khalid; Pluskota, Elzbieta; Bialkowska, Katarzyna; others"
+  journal: "Journal of Biological Chemistry"
+  volume: ""
+  number: ""
+  pages: "104774"
+  doi: ""
+  url: ""
+
+- id: yeon2023cancer
+  year: 2023
+  title: "Cancer/testis antigen CAGE mediates osimertinib resistance in non-small cell lung cancer cells and predicts poor prognosis in patients with pulmonary adenocarcinoma"
+  authors: "Yeon, Minjeong; Lee, Hankyu; Yeo, Jeongseon; Jeong, Myeong Seon; Jung, Hyun Suk; Lee, Hyerim; Shim, Kyeonghee; Jo, Hyein; Jeon, Doyong; Koh, Jaemoon; others"
+  journal: "Scientific Reports"
+  volume: "13"
+  number: "1"
+  pages: "15748"
+  doi: ""
+  url: ""
+
+- id: yeon2021cage
+  year: 2021
+  title: "The CAGE–MiR-181b-5p–S1PR1 Axis Regulates Anticancer Drug Resistance and Autophagy in Gastric Cancer Cells"
+  authors: "Yeon, Minjeong; Kim, Youngmi; Pathak, Deepak; Kwon, Eunju; Kim, Dong Young; Jeong, Myeong Seon; Jung, Hyun Suk; Jeoung, Dooil"
+  journal: "Frontiers in Cell and Developmental Biology"
+  volume: "9"
+  number: ""
+  pages: "666387"
+  doi: ""
+  url: ""
+
+- id: yang2020electron
+  year: 2020
+  title: "Electron microscopic and spectroscopic analysis of airborne ultrafine particles: its effects on the cell viability"
+  authors: "Yang, Jeong Bin; Yun, Hyung Joong; Yeon, Min Jeong; Jeoung, Dooil; Jo, Kyoung-nam; Jung, Hyun Suk"
+  journal: "Journal of Analytical Science and Technology"
+  volume: "11"
+  number: "1"
+  pages: "33"
+  doi: ""
+  url: ""
+
+- id: yeon2020histone
+  year: 2020
+  title: "Histone deacetylase inhibitors to overcome resistance to targeted and immuno therapy in metastatic melanoma"
+  authors: "Yeon, Minjeong; Kim, Youngmi; Jung, Hyun Suk; Jeoung, Dooil"
+  journal: "Frontiers in Cell and Developmental Biology"
+  volume: "8"
+  number: ""
+  pages: "486"
+  doi: ""
+  url: ""
+
+- id: yeon2019cage
+  year: 2019
+  title: "CAGE-miR-140-5p-Wnt1 axis regulates autophagic flux, tumorigenic potential of mouse colon cancer cells and cellular interactions mediated by exosomes"
+  authors: "Yeon, Minjeong; Lee, Seungheon; Lee, Joo-Eun; Jung, Hyun Suk; Kim, Youngmi; Jeoung, Dooil"
+  journal: "Frontiers in Oncology"
+  volume: "9"
+  number: ""
+  pages: "1240"
+  doi: ""
+  url: ""
+
+- id: yeon2018cage
+  year: 2018
+  title: "CAGE binds to beclin1, regulates autophagic flux and CAGE-derived peptide confers sensitivity to anti-cancer drugs in non-small cell lung cancer cells"
+  authors: "Yeon, Minjeong; Byun, Jaewhan; Kim, Hyuna; Kim, Misun; Jung, Hyun Suk; Jeon, Doyong; Kim, Youngmi; Jeoung, Dooil"
+  journal: "Frontiers in Oncology"
+  volume: "8"
+  number: ""
+  pages: "599"
+  doi: ""
+  url: ""
+
+- id: kim2017ddx53
+  year: 2017
+  title: "DDX53 regulates cancer stem cell-like properties by binding to SOX-2"
+  authors: "Kim, Youngmi; Yeon, Minjeong; Jeoung, Dooil"
+  journal: "Molecules and Cells"
+  volume: "40"
+  number: "5"
+  pages: "322–330"
+  doi: ""
+  url: ""
