@@ -130,8 +130,8 @@ nav.navbar.navbar-custom .navbar-brand-logo {
 
 /* Use one consistent content width */
 :root {
-  --yeon-content-max: 1100px; /* change to 1000px / 1200px if you prefer */
-  --yeon-content-pad: 12px;   /* consistent side padding */
+  --yeon-content-max: 1000px; /* change to 1000px / 1200px if you prefer */
+  --yeon-content-pad: 24px;   /* consistent side padding */
 }
 
 /* Beautiful Jekyll wraps content in <main class="container-md ..."> */
