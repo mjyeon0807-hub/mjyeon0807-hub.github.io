@@ -1,67 +1,66 @@
 {%- assign pubs = site.data.publications | sort: "year" | reverse -%}
 
-<div class="pubs2-timeline">
-  {%- assign current_year = "" -%}
-  {%- assign my_name_variants = "Yeon, Minjeong|Yeon, Min Jeong|Minjeong Yeon" | split: "|" -%}
+<div class="pubs2-wrap">
 
-  {%- for pub in pubs -%}
-    {%- if pub.year != current_year -%}
-      {%- assign current_year = pub.year -%}
-      <div class="pubs2-year-group" aria-label="Year {{ current_year }}">
-        <div class="pubs2-year-heading">{{ current_year }}</div>
+  <div class="pubs2-timeline">
+    {%- assign current_year = "" -%}
+
+    {%- for pub in pubs -%}
+      {%- if pub.year != current_year -%}
+        {%- assign current_year = pub.year -%}
+        <div class="pubs2-year-group" aria-label="Year {{ current_year }}">
+          <div class="pubs2-year-heading">{{ current_year }}</div>
+        </div>
+      {%- endif -%}
+
+      {%- comment -%}
+      Pick link priority:
+      - pub.url
+      - pub.doi (doi.org)
+      - fallback: Google Scholar title search
+      {%- endcomment -%}
+      {%- assign link = "" -%}
+      {%- if pub.url and pub.url != "" -%}
+        {%- assign link = pub.url -%}
+      {%- elsif pub.doi and pub.doi != "" -%}
+        {%- assign link = "https://doi.org/" | append: pub.doi -%}
+      {%- else -%}
+        {%- assign link = "https://scholar.google.com/scholar?q=" | append: (pub.title | uri_escape) -%}
+      {%- endif -%}
+
+      {%- assign authors = pub.authors | default: "" -%}
+      {%- assign authors = authors | replace: "Yeon, Minjeong", "<strong>Yeon, Minjeong</strong>" -%}
+      {%- assign authors = authors | replace: "Yeon, Min Jeong", "<strong>Yeon, Min Jeong</strong>" -%}
+      {%- assign authors = authors | replace: "Minjeong Yeon", "<strong>Minjeong Yeon</strong>" -%}
+
+      <div class="pubs2-item">
+        <div class="pubs2-line"></div>
+
+        <div class="pubs2-text">
+          <h3 class="pubs2-title">
+            <a href="{{ link }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+          </h3>
+
+          {%- if authors != "" -%}
+            <p class="pubs2-authors">{{ authors }}</p>
+          {%- endif -%}
+
+          <p class="pubs2-journal">
+            {%- if pub.journal and pub.journal != "" -%}
+              {{ pub.journal }}
+            {%- endif -%}
+            {%- if pub.volume and pub.volume != "" -%}
+              <span> {{ pub.volume }}</span>
+            {%- endif -%}
+            {%- if pub.number and pub.number != "" -%}
+              <span>({{ pub.number }})</span>
+            {%- endif -%}
+            {%- if pub.pages and pub.pages != "" -%}
+              <span>: {{ pub.pages }}</span>
+            {%- endif -%}
+          </p>
+        </div>
       </div>
-    {%- endif -%}
-
-    {%- comment -%}
-    Link priority:
-    1) pub.url
-    2) pub.doi -> doi.org
-    3) fallback -> Google Scholar search by title
-    {%- endcomment -%}
-    {%- if pub.url and pub.url != "" -%}
-      {%- assign link = pub.url -%}
-    {%- elsif pub.doi and pub.doi != "" -%}
-      {%- assign link = "https://doi.org/" | append: pub.doi -%}
-    {%- else -%}
-      {%- assign link = "https://scholar.google.com/scholar?q=" | append: (pub.title | uri_escape) -%}
-    {%- endif -%}
-
-    {%- assign authors = pub.authors | default: "" -%}
-    {%- for n in my_name_variants -%}
-      {%- assign authors = authors | replace: n, "<strong>" | append: n | append: "</strong>" -%}
     {%- endfor -%}
-    {%- comment -%}
-    Note: Liquid can't easily do a clean "<strong>n</strong>" replacement in a loop without some tricks.
-    If this loop ever behaves oddly, we can revert to 3 explicit replace lines (your original is fine).
-    {%- endcomment -%}
-
-    <div class="pubs2-item">
-      <div class="pubs2-line"></div>
-
-      <div class="pubs2-text">
-        <h3 class="pubs2-title">
-          <a href="{{ link }}" target="_blank" rel="noopener">{{ pub.title }}</a>
-        </h3>
-
-        {%- if authors != "" -%}
-          <p class="pubs2-authors">{{ authors }}</p>
-        {%- endif -%}
-
-        <p class="pubs2-journal">
-          {%- if pub.journal and pub.journal != "" -%}
-            {{ pub.journal }}
-          {%- endif -%}
-          {%- if pub.volume and pub.volume != "" -%}
-            <span> {{ pub.volume }}</span>
-          {%- endif -%}
-          {%- if pub.number and pub.number != "" -%}
-            <span>({{ pub.number }})</span>
-          {%- endif -%}
-          {%- if pub.pages and pub.pages != "" -%}
-            <span>: {{ pub.pages }}</span>
-          {%- endif -%}
-        </p>
-      </div>
-    </div>
-  {%- endfor -%}
+  </div>
 </div>
