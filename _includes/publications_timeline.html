@@ -1,14 +1,5 @@
 {%- assign pubs = site.data.publications | sort: "year" | reverse -%}
 
-<div class="pubs2-wrap">
-  <div class="pubs2-header">
-    <p>
-      ^: first authors, *: corresponding authors<br>
-      (For the full list, see
-      <a href="https://scholar.google.com/citations?user=H9L46kUAAAAJ&hl=en&view_op=list_works&sortby=pubdate"
-         target="_blank" rel="noopener">Google Scholar</a>.)
-    </p>
-  </div>
 
   <div class="pubs2-timeline">
     {%- assign current_year = "" -%}
