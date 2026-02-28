@@ -11,8 +11,8 @@ css:
     <h2><i class="fas fa-user"></i> Principal Investigator</h2>
     <div class="contact-body">
       <p><strong>Minjeong Yeon</strong><br>
-      Lab of Molecular and Cellular Crosstalk (MXC)<br>
-      Chungbuk National University, College of Medicine</p>
+      Cellular and Molecular Communication Laboratory (CMCL)<br>
+      Department of Biochemistry, Chungbuk National University College of Medicine</p>
     </div>
   </div>
 
