@@ -20,6 +20,9 @@ nav.navbar.navbar-custom.top-nav-short-permanent {
   padding-bottom: 14px !important;
 
   border-bottom: 3px solid rgba(0, 0, 0, 0.12) !important;
+
+  /* No longer fixed — flows with the page */
+  position: relative !important;
 }
 
 /* Dark overlay for readability */
@@ -77,4 +80,21 @@ nav.navbar.navbar-custom .dropdown-menu .dropdown-item {
 /* Hide logo image brand */
 nav.navbar.navbar-custom .navbar-brand-logo {
   display: none !important;
+}
+
+/* ==========================================================================
+   FIX: Remove old margin-top that compensated for fixed-top navbar.
+   Now the navbar is in normal document flow, so no top margin is needed.
+   ========================================================================== */
+.intro-header {
+  margin-top: 0 !important;
+}
+.intro-header.big-img {
+  margin-top: 0 !important;
+}
+nav.top-nav-short-permanent ~ header > .intro-header {
+  margin-top: 0 !important;
+}
+nav.top-nav-short-permanent ~ header > .intro-header.big-img {
+  margin-top: 0 !important;
 }
