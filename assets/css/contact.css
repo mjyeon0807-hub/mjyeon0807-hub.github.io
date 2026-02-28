@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Contact page styles
+   ========================================================================== */
+
+.contact-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background: #fff;
+}
+
+/* Section titles — muted teal to match the site's hover/accent color */
+.contact-card h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+.contact-card h2 i {
+  margin-right: 8px;
+  color: #2c3e50;
+}
+
+/* Left indent ("tab" space) for all card content below the title */
+.contact-body {
+  padding-left: 1.8rem;
+}
+
+.contact-body p {
+  margin: 0;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Address: image left + text right */
+.contact-address-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.contact-address-img {
+  flex-shrink: 0;
+  width: 260px;
+}
+
+.contact-address-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.contact-address-text {
+  flex: 1;
+  padding-top: 0.2rem;
+}
+
+/* Mobile: stack image above text */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 1rem 1.2rem;
+  }
+
+  .contact-body {
+    padding-left: 1rem;
+  }
+
+  .contact-address-row {
+    flex-direction: column;
+  }
+
+  .contact-address-img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
