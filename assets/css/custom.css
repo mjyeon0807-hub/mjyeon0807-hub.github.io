@@ -122,5 +122,17 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 /* Also tighten the header-section wrapper itself */
 .header-section {
   margin-bottom: 0 !important;
+
+   }
+
+/* ==========================================================================
+   FIX: Center page content with equal left/right margins
+   Cap the content width and auto-center it on wide screens.
+   ========================================================================== */
+main.container-fluid.fullwidth-pad > .row {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
   padding-bottom: 0 !important;
 }
