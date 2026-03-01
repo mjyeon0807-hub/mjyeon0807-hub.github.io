@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .news-wrap {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -22,7 +22,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
 }
 
-/* Date column */
+/* Date column (left) */
 .news-date {
   flex-shrink: 0;
   width: 70px;
@@ -48,9 +48,10 @@
   margin-top: 4px;
 }
 
-/* Content column */
+/* Content column (center) */
 .news-content {
   flex: 1;
+  min-width: 0;
 }
 
 .news-title {
@@ -113,6 +114,29 @@
   margin-left: 4px;
 }
 
+/* Image column (right) */
+.news-image {
+  flex-shrink: 0;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  object-fit: cover;
+}
+
+/* Hide the empty image column when no image is provided */
+.news-image:empty {
+  display: none;
+}
+
 /* Mobile */
 @media (max-width: 600px) {
   .news-card {
@@ -135,5 +159,10 @@
 
   .news-date-month {
     margin-top: 0;
+  }
+
+  .news-image {
+    width: 100%;
+    max-width: 250px;
   }
 }
