@@ -17,13 +17,7 @@ css:
     <span class="news-date-month">{{ item.date | date: "%b %Y" }}</span>
   </div>
   <div class="news-content">
-    <h3 class="news-title">
-      {% if item.link %}
-        <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a>
-      {% else %}
-        {{ item.title }}
-      {% endif %}
-    </h3>
+    <h3 class="news-title">{{ item.title }}</h3>
     {% if item.tags %}
     <div class="news-tags">
       {% for tag in item.tags %}
