@@ -32,6 +32,11 @@ css:
     </a>
     {% endif %}
   </div>
+  <div class="news-image">
+    {% if item.image %}
+      <img src="{{ item.image }}" alt="{{ item.title }}">
+    {% endif %}
+  </div>
 </div>
 {% endfor %}
 
