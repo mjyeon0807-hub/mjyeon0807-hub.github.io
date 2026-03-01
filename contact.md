@@ -10,8 +10,8 @@ css:
   <div class="contact-card">
     <h2><i class="fas fa-user"></i> Principal Investigator</h2>
     <div class="contact-body">
-      <p><strong>Minjeong Yeon</strong><br>
-      Cellular and Molecular Communication Laboratory (CMCL)<br>
+      <p><strong>Minjeong Yeon,Ph.D.</strong><br>
+      Molecular Intra/intercellular Communication Laboratory (MICL)<br>
       Department of Biochemistry, Chungbuk National University College of Medicine</p>
     </div>
   </div>
