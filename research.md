@@ -1,6 +1,6 @@
 ---
 title: "Research"
-subtitle: "Research themes in the MXC Lab"
+subtitle: "Research themes in the MIC Lab"
 ---
 
 ## Tumor microenvironment
