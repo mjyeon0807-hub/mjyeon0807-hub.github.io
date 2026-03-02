@@ -31,7 +31,7 @@ navbar-links:
 
 social-network-links:
   email: "mjyeon@chungbuk.ac.kr"
-  rss: true
+  rss: false
 #  github: ""
 #  twitter: ""
   linkedin: "www.linkedin.com/in/minjeongyeon"
@@ -57,8 +57,8 @@ excerpt_length: 50
 feed_show_excerpt: true
 feed_show_tags: true
 
-post_search: true
-edit_page_button: true
+post_search: false
+edit_page_button: false
 navbar-var-length: false
 
 keywords: "MXC, Lab of Molecular and Cellular Crosstalk, Chungbuk National University, College of Medicine, tumor microenvironment, extracellular vesicles, cancer immunology, mitochondria fitness"
