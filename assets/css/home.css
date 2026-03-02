@@ -77,7 +77,6 @@
 }
 
 .home-col h3 {
-  font-size: 1.1rem;
   font-weight: 800;
   color: #2c3e50;
   margin: 0 0 1.2rem 0;
@@ -86,38 +85,65 @@
   font-size: 0.85rem;
 }
 
-/* PI block */
-.home-pi-block {
+/* ---- Publications list ---- */
+.home-pub-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.home-pub-ul li {
   display: flex;
-  align-items: center;
-  gap: 1.2rem;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.home-pi-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.home-pub-ul li:last-child {
+  border-bottom: none;
+}
+
+.home-pub-year {
   flex-shrink: 0;
-}
-
-.home-pi-name {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: 800;
-  color: #222;
-  margin: 0 0 0.3rem 0;
+  color: #999;
+  padding-top: 2px;
+  min-width: 38px;
 }
 
-.home-pi-title {
+.home-pub-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.home-pub-title {
+  margin: 0 0 2px 0;
   font-size: 0.92rem;
-  color: #555;
-  line-height: 1.6;
-  margin: 0;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #333;
 }
 
-/* News list */
+.home-pub-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.home-pub-title a:hover {
+  color: #0085A1;
+  text-decoration: underline;
+}
+
+.home-pub-journal {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* ---- News list ---- */
 .home-news-ul {
   list-style: none;
   padding: 0;
@@ -143,6 +169,7 @@
   margin-right: 10px;
 }
 
+/* ---- Shared link style ---- */
 .home-link {
   font-size: 0.88rem;
   font-weight: 700;
@@ -191,11 +218,6 @@
 
   .home-col {
     padding: 1.2rem 1.4rem;
-  }
-
-  .home-pi-block {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .home-contact-strip {
