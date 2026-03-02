@@ -136,3 +136,9 @@ main.container-fluid.fullwidth-pad > .row {
 }
   padding-bottom: 0 !important;
 }
+
+.intro-header {
+  margin-bottom: 1rem !important;
+}
+
+
