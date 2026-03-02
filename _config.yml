@@ -7,7 +7,7 @@
 ############################
 
 title: "YEON LAB"
-author: "Minjeong Yeon"
+author: "YEON LAB"
 
 # For GitHub Pages user site: https://mjyeon0807-hub.github.io
 url: "https://mjyeon0807-hub.github.io"
@@ -30,12 +30,12 @@ navbar-links:
 #####################################
 
 social-network-links:
-  email: ""   # add later, e.g. "mxc@chungbuk.ac.kr"
+  email: "mjyeon@chungbuk.ac.kr"   
   rss: true
 #  github: ""
 #  twitter: ""
-#  linkedin: ""
-#  google-scholar: ""
+  linkedin: "www.linkedin.com/in/minjeongyeon"
+ google-scholar: "https://scholar.google.com/citations?user=H9L46kUAAAAJ&hl=en&oi=ao"
 
 rss-description: "Updates and news from the Lab of Molecular and Cellular Crosstalk (MXC)."
 
@@ -46,7 +46,7 @@ rss-description: "Updates and news from the Lab of Molecular and Cellular Crosst
 share-links-active:
   twitter: false
   facebook: false
-  linkedin: false
+  linkedin: true
   vk: false
   reddit: false
 
