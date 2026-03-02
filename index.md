@@ -8,7 +8,7 @@ css:
 
 <!-- Hero welcome -->
 <div class="home-hero">
-  <img src="/assets/img/MICL-bac.jpg" alt="MIC Lab" class="home-hero-img">
+  <img src="/assets/img/MICL-bac.png" alt="MIC Lab" class="home-hero-img">
   <p class="home-hero-kr">충북대학교 의과대학 생화학교실 <strong>세포내외 분자 커뮤니케이션 연구실 (MICL)</strong>에 오신 것을 환영합니다. 저희 연구실은 암 미세환경에서 분자 및 세포 간 커뮤니케이션이 암의 악성화에 미치는 영향을 연구하며 이에 대한 표적 치료법을 발굴하는 연구를 하고 있습니다. </p>
   
   <p class="home-hero-en">Welcome to the <strong>Molecular Intra/Intercellular Communication Laboratory (MICL)</strong> in the Department of Biochemistry at Chungbuk National University Medical School. Our laboratory investigates how molecular and intercellular communication within the tumor microenvironment drives cancer malignancy, with the ultimate goal of discovering novel targeted therapeutics.</p>
