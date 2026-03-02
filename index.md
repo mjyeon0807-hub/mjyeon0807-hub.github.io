@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 title: "WELCOME"
 subtitle: "Molecular Intra/Intercellular Communication Laboratory"
 css:
