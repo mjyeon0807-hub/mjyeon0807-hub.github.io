@@ -16,6 +16,14 @@
   letter-spacing: -0.02em;
 }
 
+.home-hero img.home-hero-img {
+  width: 30%;
+  max-width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
 .home-hero-en {
   font-size: 1.1rem;
   color: #444;
@@ -202,6 +210,11 @@
     font-size: 1.5rem;
   }
 
+  .home-hero img.home-hero-img {
+    width: 60%;
+    max-width: 60%;
+  }
+
   .home-band-inner {
     flex-direction: column;
     gap: 4px;
@@ -224,13 +237,4 @@
     padding: 1rem 1.2rem;
     text-align: left;
   }
-}
-
-
-.home-hero img.home-hero-img {
-  width: 50% !important;
-  max-width: 50% !important;
-  height: auto !important;
-  display: block;
-  margin: 0 auto 1.5rem;
 }
