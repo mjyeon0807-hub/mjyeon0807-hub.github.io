@@ -17,7 +17,7 @@ subtitle: "Lab Members"
 
     <div class="team2-bio">
       <p>
-        Minjeong Yeon, Ph.D., is an Assistant Professor of department of Biochemistry at Chungbuk National University Medical School. She earned her Ph.D. in Biochemistry from Kangwon National University in 2022, where her research focused on cancer drug resistance and autophagic flux. Prior to her current faculty appointment, Dr. Yeon completed a four-year postdoctoral fellowship in the Genome Regulation and Cell Signaling Program at The Wistar Institute of Anatomy and Biology. Her research interests center on Intercellular communication via extracellular vesicles, and discovering novel molecular targets in cancer biology.
+        Minjeong Yeon, Ph.D., is an Assistant Professor of department of Biochemistry at Chungbuk National University Medical School. She earned her Ph.D. in Biochemistry from Kangwon National University in 2022, where her research focused on cancer drug resistance and autophagic flux. Prior to her current faculty appointment, Dr. Yeon completed a four-year postdoctoral fellowship in the Genome Regulation and Cell Signaling Program at The Wistar Institute of Anatomy and Biology.
       </p>
     </div>
   </div>
