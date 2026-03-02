@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "MIC LAB"
+title: "MIC Lab"
 subtitle: "Molecular Intra/intercellular Communication Laboratry"
 ---
 
