@@ -5,7 +5,7 @@
 /* ---- Hero section ---- */
 .home-hero {
   text-align: center;
-  padding: 2.5rem 1rem 2rem;
+  padding: 2.5rem 0 2rem;
 }
 
 .home-hero h2 {
@@ -20,7 +20,7 @@
   font-size: 1.1rem;
   color: #444;
   line-height: 1.8;
-  max-width: 700px;
+  max-width: 100%;
   margin: 0 auto 1rem;
 }
 
@@ -28,7 +28,7 @@
   font-size: 0.98rem;
   color: #666;
   line-height: 1.8;
-  max-width: 700px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
