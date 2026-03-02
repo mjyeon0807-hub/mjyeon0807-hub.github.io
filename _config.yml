@@ -30,12 +30,12 @@ navbar-links:
 #####################################
 
 social-network-links:
-  email: "mjyeon@chungbuk.ac.kr"   
+  email: "mjyeon@chungbuk.ac.kr"
   rss: true
 #  github: ""
 #  twitter: ""
   linkedin: "www.linkedin.com/in/minjeongyeon"
- google-scholar: "https://scholar.google.com/citations?user=H9L46kUAAAAJ&hl=en&oi=ao"
+  google-scholar: "https://scholar.google.com/citations?user=H9L46kUAAAAJ&hl=en&oi=ao"
 
 rss-description: "Updates and news from the Lab of Molecular and Cellular Crosstalk (MXC)."
 
@@ -73,7 +73,7 @@ link-col: "#008AFF"
 hover-col: "#0085A1"
 navbar-col: "#FFFFFF"
 navbar-text-col: "#404040"
-navbar-border-col: #E6E6E6"
+navbar-border-col: "#E6E6E6"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
@@ -130,4 +130,3 @@ plugins:
 site-css:
   - "/assets/css/custom.css"
   - "/assets/css/team.css"
-
