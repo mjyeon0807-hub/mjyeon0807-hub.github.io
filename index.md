@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "MIC Lab"
+title: "WELCOME"
 subtitle: "Molecular Intra/Intercellular Communication Laboratory"
 css:
   - "/assets/css/home.css"
@@ -9,8 +9,8 @@ css:
 <!-- Hero welcome -->
 <div class="home-hero">
   <h2>Welcome to MIC Lab</h2>
-  <p class="home-hero-en">We investigate how molecular and cellular communication shapes disease biology, with a focus on <strong>cancer</strong> and <strong>immunity</strong>.</p>
-  <p class="home-hero-kr">충북대학교 의과대학 생화학교실 <strong>세포내외 분자 커뮤니케이션 연구실 (MICL)</strong>에 오신 것을 환영합니다. 저희 연구실은 암과 면역을 중심으로 분자 및 세포 간 커뮤니케이션이 질병 생물학에 미치는 영향을 연구하고 있습니다.</p>
+  <p class="home-hero-kr">충북대학교 의과대학 생화학교실 <strong>세포내외 분자 커뮤니케이션 연구실 (MICL)</strong>에 오신 것을 환영합니다. 저희 연구실은 암 미세환경에서 분자 및 세포 간 커뮤니케이션이 암의 악성화에 미치는 영향을 연구하며 이에 대한 표적 치료법을 발굴하는 연구를 하고 있습니다. </p>
+   <p class="home-hero-en">Welcome to the <strong>Molecular Intra- and Intercellular Communication Laboratory (MICL)</strong> in the Department of Biochemistry at Chungbuk National University Medical School. Our laboratory investigates how molecular and intercellular communication within the tumor microenvironment drives cancer malignancy, with the ultimate goal of discovering novel targeted therapeutics.</p>
 </div>
 
 <!-- Research keywords as a visual band -->
@@ -26,21 +26,37 @@ css:
   </div>
 </div>
 
-<!-- Two-column: PI + Latest News side by side -->
+<!-- Two-column: Latest Publications + Latest News -->
 <div class="home-columns">
 
-  <div class="home-col home-col-pi">
-    <h3>Principal Investigator</h3>
-    <div class="home-pi-block">
-      <img src="/assets/img/pi.jpg" alt="Minjeong Yeon" class="home-pi-img">
-      <div>
-        <p class="home-pi-name">Minjeong Yeon, Ph.D.</p>
-        <p class="home-pi-title">Assistant Professor<br>Department of Biochemistry<br>Chungbuk National University College of Medicine</p>
-      </div>
-    </div>
+  <div class="home-col">
+    <h3>Latest Publications</h3>
+    <ul class="home-pub-ul">
+      {% assign pubs = site.data.publications | sort: "year" | reverse %}
+      {% for pub in pubs limit:5 %}
+      <li>
+        <span class="home-pub-year">{{ pub.year }}</span>
+        <div class="home-pub-info">
+          <p class="home-pub-title">
+            {% if pub.url and pub.url != "" %}
+              <a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+            {% elsif pub.doi and pub.doi != "" %}
+              <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+            {% else %}
+              {{ pub.title }}
+            {% endif %}
+          </p>
+          {% if pub.journal and pub.journal != "" %}
+          <p class="home-pub-journal">{{ pub.journal }}</p>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <a class="home-link" href="/publications">View all publications →</a>
   </div>
 
-  <div class="home-col home-col-news">
+  <div class="home-col">
     <h3>Latest News</h3>
     <ul class="home-news-ul">
       {% assign news_items = site.data.news | sort: "date" | reverse %}
