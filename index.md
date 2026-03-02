@@ -1,7 +1,7 @@
 ---
 layout: home
-title: "WELCOME"
-subtitle: "Molecular Intra/intercellular Communication Laboratry (MICL)"
+title: "MIC LAB"
+subtitle: "Molecular Intra/intercellular Communication Laboratry"
 ---
 
 ## Welcome
