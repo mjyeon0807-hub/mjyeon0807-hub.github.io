@@ -7,3 +7,5 @@ subtitle: "Research themes in the MIC Lab"
 
 Our laboratory is particularly interested in extracellular vesicles (EVs) secreted by cancer cells and surrounding immune cells. Our goal is to develop novel anti-cancer therapeutics that target the specific molecules released through these EVs. Additionally, we focus on the homeostasis and dynamics of mitochondria, a central organelle in both cancer and neighboring immune cells. By investigating how intracellular mitochondrial alterations drive functional changes in these cells, we aim to develop targeted anti-cancer agents based on these fundamental mechanisms.
 
+/assets/img/research-1.png
+/assets/img/research-2.png
