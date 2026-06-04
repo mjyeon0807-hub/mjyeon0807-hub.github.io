@@ -7,7 +7,7 @@ subtitle: "Lab Members"
 <div class="team2">
   <!-- Row 1 / Left -->
   <div class="team2-photo">
-    <img src="/assets/img/PI.jpg" alt="Principal Investigator photo">
+    <img src="/assets/img/PI.png" alt="Principal Investigator photo">
   </div>
 
   <!-- Row 1 / Right -->
