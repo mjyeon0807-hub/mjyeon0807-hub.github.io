@@ -60,11 +60,11 @@ css:
   <div class="home-col">
     <h3>Latest News</h3>
     <ul class="home-news-ul">
-      {% assign news_items = site.data.news | sort: "date" | reverse %}
+      {% assign news_items = site.news | sort: "date" | reverse %}
       {% for item in news_items limit:3 %}
       <li>
         <span class="home-news-date">{{ item.date | date: "%Y.%m.%d" }}</span>
-        {{ item.title }}
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       </li>
       {% endfor %}
     </ul>

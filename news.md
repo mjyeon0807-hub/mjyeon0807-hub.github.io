@@ -8,7 +8,7 @@ css:
 
 <div class="news-wrap">
 
-{% assign news_items = site.data.news | sort: "date" | reverse %}
+{% assign news_items = site.news | sort: "date" | reverse %}
 
 {% for item in news_items %}
 <div class="news-card">
@@ -17,7 +17,7 @@ css:
     <span class="news-date-month">{{ item.date | date: "%b %Y" }}</span>
   </div>
   <div class="news-content">
-    <h3 class="news-title">{{ item.title }}</h3>
+    <h3 class="news-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
     {% if item.tags %}
     <div class="news-tags">
       {% for tag in item.tags %}
@@ -26,11 +26,9 @@ css:
     </div>
     {% endif %}
     <p class="news-description">{{ item.description }}</p>
-    {% if item.link %}
-    <a class="news-read-more" href="{{ item.link }}" target="_blank" rel="noopener">
-      Read article <i class="fas fa-external-link-alt"></i>
+    <a class="news-read-more" href="{{ item.url | relative_url }}">
+      자세히 보기 <i class="fas fa-arrow-right"></i>
     </a>
-    {% endif %}
   </div>
   <div class="news-image">
     {% if item.image %}
