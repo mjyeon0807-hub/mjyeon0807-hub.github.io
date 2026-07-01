@@ -17,8 +17,8 @@
   volume: "134"
   number: "22"
   pages: ""
-  doi: ""
-  url: ""
+  doi: "10.1172/JCI180983"
+  url: "https://www.jci.org/articles/view/180983"
 
 - id: yeon2025parkin
   year: 2025
@@ -28,8 +28,8 @@
   volume: "85"
   number: "24"
   pages: "5033–5048"
-  doi: ""
-  url: ""
+  doi: "10.1158/0008-5472.CAN-25-0904"
+  url: "https://aacrjournals.org/cancerres/article-abstract/85/24/5033/770547"
 
 - id: yeon2024hdac9
   year: 2024
@@ -39,8 +39,8 @@
   volume: "46"
   number: "6"
   pages: "5178–5193"
-  doi: ""
-  url: ""
+  doi: "10.3390/cimb46060311"
+  url: "https://www.mdpi.com/1467-3045/46/6/311"
 
 - id: yeon2023parkin
   year: 2023
@@ -50,8 +50,8 @@
   volume: ""
   number: ""
   pages: "104774"
-  doi: ""
-  url: ""
+  doi: "10.1016/j.jbc.2023.104774"
+  url: "https://www.sciencedirect.com/science/article/pii/S0021925823018021"
 
 - id: yeon2023cancer
   year: 2023
@@ -61,8 +61,8 @@
   volume: "13"
   number: "1"
   pages: "15748"
-  doi: ""
-  url: ""
+  doi: "10.1038/s41598-023-43124-8"
+  url: "https://www.nature.com/articles/s41598-023-43124-8"
 
 - id: yeon2021cage
   year: 2021
@@ -72,8 +72,8 @@
   volume: "9"
   number: ""
   pages: "666387"
-  doi: ""
-  url: ""
+  doi: "10.3389/fcell.2021.666387"
+  url: "https://www.frontiersin.org/journals/cell-and-developmental-biology/articles/10.3389/fcell.2021.666387/full"
 
 - id: yang2020electron
   year: 2020
@@ -83,8 +83,8 @@
   volume: "11"
   number: "1"
   pages: "33"
-  doi: ""
-  url: ""
+  doi: "10.1186/s40543-020-00233-7"
+  url: "https://jast-journal.springeropen.com/articles/10.1186/s40543-020-00233-7"
 
 - id: yeon2020histone
   year: 2020
@@ -94,8 +94,8 @@
   volume: "8"
   number: ""
   pages: "486"
-  doi: ""
-  url: ""
+  doi: "10.3389/fcell.2020.00486"
+  url: "https://www.frontiersin.org/journals/cell-and-developmental-biology/articles/10.3389/fcell.2020.00486/full"
 
 - id: yeon2019cage
   year: 2019
@@ -105,8 +105,8 @@
   volume: "9"
   number: ""
   pages: "1240"
-  doi: ""
-  url: ""
+  doi: "10.3389/fonc.2019.01240"
+  url: "https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2019.01240/full"
 
 - id: yeon2018cage
   year: 2018
@@ -116,8 +116,8 @@
   volume: "8"
   number: ""
   pages: "599"
-  doi: ""
-  url: ""
+  doi: "10.3389/fonc.2018.00599"
+  url: "https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2018.00599/full"
 
 - id: kim2017ddx53
   year: 2017
@@ -127,5 +127,5 @@
   volume: "40"
   number: "5"
   pages: "322–330"
-  doi: ""
-  url: ""
+  doi: "10.14348/molcells.2017.0001"
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5463040/"
