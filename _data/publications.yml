@@ -1,3 +1,14 @@
+- id: milcarek2026mitochondrial
+  year: 2026
+  title: "Mitochondrial double-stranded RNA fuels pancreatic cancer growth via RIG-I/TLR3 inflammation"
+  authors: "Milcarek, Andrew T; Yeon, Minjeong; Esposito, Camilla; Kulkarni, Prakash; Kossenkov, Andrew V; Madzo, Jozef; others"
+  journal: "Proceedings of the National Academy of Sciences"
+  volume: "123"
+  number: "18"
+  pages: "e2528281123"
+  doi: "10.1073/pnas.2528281123"
+  url: "https://www.pnas.org/doi/10.1073/pnas.2528281123"
+
 - id: perego2025parkin
   year: 2025
   title: "Parkin activates innate immunity and promotes antitumor immune responses"
