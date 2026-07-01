@@ -1,0 +1,25 @@
+/* ==========================================================================
+   News detail pages (_news collection, layout: post)
+   ========================================================================== */
+
+/* More breathing room above the title, slightly smaller heading */
+.intro-header .post-heading {
+  padding-top: 2rem;
+}
+
+.intro-header .post-heading h1 {
+  font-size: calc(2.1875rem - 2pt);
+}
+
+@media (min-width: 1200px) {
+  .intro-header .post-heading h1 {
+    font-size: calc(3.125rem - 2pt);
+  }
+}
+
+/* Photos: half size, placed below the article text */
+.blog-post img {
+  max-width: 50%;
+  display: block;
+  margin: 2rem auto 0;
+}

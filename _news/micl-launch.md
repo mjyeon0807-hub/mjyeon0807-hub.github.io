@@ -6,10 +6,10 @@ image: "/assets/img/MICL.png"
 tags: [News]
 ---
 
-![MICL 로고](/assets/img/MICL.png)
-
 연구실 이름을 **세포내외 분자 커뮤니케이션 연구실 (Molecular Intra/Intercellular Communication Laboratory, MICL)**로 정하였습니다.
 
 Microphone(MIC)이 작은 소리를 크게 증폭시키는 역할을 하는 것처럼, 저희 연구실에서 수행되는 연구들이 생명과학의 발전과 인류의 건강에 기여할 수 있기를 소망하며 이름을 지었습니다.
 
 열심히 나아가겠습니다! 앞으로 많은 관심과 응원 부탁드리겠습니다!
+
+![MICL 로고](/assets/img/MICL.png)
