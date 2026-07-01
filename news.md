@@ -25,7 +25,13 @@ css:
       {% endfor %}
     </div>
     {% endif %}
-    <p class="news-description">{{ item.description }}</p>
+    {%- assign news_sentences = item.description | split: ". " -%}
+    {%- if news_sentences.size > 3 -%}
+      {%- assign news_preview = news_sentences | slice: 0, 3 | join: ". " | append: "." -%}
+    {%- else -%}
+      {%- assign news_preview = item.description -%}
+    {%- endif -%}
+    <p class="news-description">{{ news_preview }}</p>
     <a class="news-read-more" href="{{ item.url | relative_url }}">
       자세히 보기 <i class="fas fa-arrow-right"></i>
     </a>
