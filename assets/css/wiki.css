@@ -6,6 +6,7 @@
 
 .wiki-page {
   max-width: 1000px;
+  margin: 0 auto;
   scroll-behavior: smooth;
 }
 

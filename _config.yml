@@ -20,7 +20,10 @@ baseurl: ""
 navbar-links:
   Home: "/"
   Team: "team"
-  Research: "research"
+  Research:
+    - "Research Theme": "research"
+    - "Today's Paper": "todays-paper"
+    - "Wiki": "wiki"
   Publications: "publications"
   News: "news"
   Contact: "contact"
