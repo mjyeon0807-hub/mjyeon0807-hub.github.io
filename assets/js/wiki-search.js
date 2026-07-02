@@ -3,19 +3,16 @@
   var list = document.getElementById('wiki-term-list');
   if (!input || !list) return;
 
-  var items = Array.prototype.slice.call(list.querySelectorAll('.wiki-term-item'));
-  var headings = Array.prototype.slice.call(list.querySelectorAll('.wiki-letter-heading'));
+  var cards = Array.prototype.slice.call(list.querySelectorAll('.wiki-term-card'));
+  var sections = Array.prototype.slice.call(list.querySelectorAll('.wiki-letter-section'));
   var noResults = document.getElementById('wiki-no-results');
 
-  function updateHeadingVisibility() {
-    headings.forEach(function (heading) {
-      var ul = heading.nextElementSibling;
-      if (!ul) return;
-      var anyVisible = Array.prototype.slice.call(ul.children).some(function (li) {
-        return li.style.display !== 'none';
+  function updateSectionVisibility() {
+    sections.forEach(function (section) {
+      var anyVisible = Array.prototype.slice.call(section.querySelectorAll('.wiki-term-card')).some(function (card) {
+        return card.style.display !== 'none';
       });
-      heading.style.display = anyVisible ? '' : 'none';
-      ul.style.display = anyVisible ? '' : 'none';
+      section.style.display = anyVisible ? '' : 'none';
     });
   }
 
@@ -23,14 +20,14 @@
     var query = input.value.trim().toLowerCase();
     var visibleCount = 0;
 
-    items.forEach(function (item) {
-      var haystack = item.getAttribute('data-search') || '';
+    cards.forEach(function (card) {
+      var haystack = card.getAttribute('data-search') || '';
       var match = query === '' || haystack.indexOf(query) !== -1;
-      item.style.display = match ? '' : 'none';
+      card.style.display = match ? '' : 'none';
       if (match) visibleCount++;
     });
 
-    updateHeadingVisibility();
+    updateSectionVisibility();
     if (noResults) {
       noResults.style.display = visibleCount === 0 ? '' : 'none';
     }
