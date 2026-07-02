@@ -1,0 +1,21 @@
+# Paper metadata for wiki/*.md glossary citations.
+# Keys are referenced by the `sources:` field in _glossary/*.md.
+# Keep in sync with llm-wiki's sources/*.md / wiki/*.md frontmatter.
+
+koltai-2026-anoikis:
+  title: "Anoikis: To Die or Not to Die?"
+  authors: "Tomas Koltai, Larry Fliegel"
+  year: 2026
+  doi: "10.3390/ijms27020579"
+
+kim-2026-ctc:
+  title: "Circulating Tumor Cells in the Blood Microenvironment: Survival Mechanisms and Metastatic Potential"
+  authors: "Dong Hyun Kim, Jee Young Sung, Yong-Nyun Kim"
+  year: 2026
+  doi: "10.1186/s44424-026-00056-0"
+
+kim-2025-trogocytosis:
+  title: "Trogocytosis-mediated immune evasion in the tumor microenvironment"
+  authors: "Jeonghyun Kim, Soyeon Park, Jungseo Kim, Yewon Kim, Hong Min Yoon, Bima Rexa Rayhan, Jaekwang Jeong, Alfred L. M. Bothwell, Jae Hun Shin"
+  year: 2025
+  doi: "10.1038/s12276-024-01364-2"

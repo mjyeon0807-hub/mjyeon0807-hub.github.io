@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Wiki (student glossary) — search page + term pages
+   ========================================================================== */
+
+.wiki-page {
+  max-width: 900px;
+}
+
+.wiki-hero-sub {
+  font-size: 1.05rem;
+  color: #6b6b6b;
+  margin-bottom: 1.25rem;
+}
+
+.wiki-search-box {
+  margin-bottom: 2rem;
+}
+
+.wiki-search-box input {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  font-size: 1.15rem;
+  border: 2px solid #cfd8dc;
+  border-radius: 6px;
+  transition: border-color 0.15s ease;
+}
+
+.wiki-search-box input:focus {
+  outline: none;
+  border-color: #008AFF;
+}
+
+.wiki-no-results {
+  color: #888;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.wiki-term-list {
+  border-top: 1px solid #e6e6e6;
+}
+
+.wiki-letter-heading {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #008AFF;
+  color: #0085A1;
+  font-size: 1.3rem;
+}
+
+.wiki-letter-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.wiki-term-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.wiki-term-item a {
+  font-size: 1.05rem;
+}
+
+.wiki-term-snippet {
+  color: #6b6b6b;
+}
+
+/* Term page */
+
+.wiki-breadcrumb a {
+  font-size: 0.95rem;
+}
+
+.wiki-category-badge {
+  display: inline-block;
+  margin: 0.5rem 0 1rem;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background: #EAEAEA;
+  color: #404040;
+  border-radius: 999px;
+}
+
+.wiki-term-body {
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.wiki-related,
+.wiki-sources {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e6e6e6;
+}
+
+.wiki-related h3,
+.wiki-sources h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.wiki-related-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.wiki-related-list li a {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: #f2f8ff;
+  border: 1px solid #cfe8ff;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.wiki-sources-list {
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+  color: #555;
+}

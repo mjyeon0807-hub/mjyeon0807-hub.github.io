@@ -1,0 +1,54 @@
+---
+---
+{% include header.html type="page" %}
+
+<main class="container-fluid fullwidth-pad wiki-page wiki-term-page">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+
+      <p class="wiki-breadcrumb"><a href="{{ '/wiki/' | relative_url }}">&larr; Back to Wiki</a></p>
+
+      {% if page.category %}
+        <span class="wiki-category-badge">{{ page.category }}</span>
+      {% endif %}
+
+      <div class="wiki-term-body">
+        {{ content }}
+      </div>
+
+      {% if page.related and page.related.size > 0 %}
+      <div class="wiki-related">
+        <h3>Related terms</h3>
+        <ul class="wiki-related-list">
+          {% for rel in page.related %}
+            {% assign rel_term = site.glossary | where: "term_id", rel | first %}
+            {% if rel_term %}
+              <li><a href="{{ rel_term.url | relative_url }}">{{ rel_term.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if page.sources and page.sources.size > 0 %}
+      <div class="wiki-sources">
+        <h3>Source papers</h3>
+        <ul class="wiki-sources-list">
+          {% for src_key in page.sources %}
+            {% assign src = site.data.wiki_papers[src_key] %}
+            {% if src %}
+              <li>
+                {{ src.title }} &mdash; <em>{{ src.authors }}</em> ({{ src.year }}).
+                {% if src.doi %}
+                  <a href="https://doi.org/{{ src.doi }}" target="_blank" rel="noopener">doi:{{ src.doi }}</a>
+                {% endif %}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</main>

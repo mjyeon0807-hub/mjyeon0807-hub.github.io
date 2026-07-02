@@ -1,0 +1,44 @@
+---
+---
+{% include header.html type="page" %}
+
+<main class="container-fluid fullwidth-pad wiki-page">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+
+      <p class="wiki-hero-sub">A student glossary distilled from the lab's paper library. Search a term below to jump straight to its definition and source papers.</p>
+
+      <div class="wiki-search-box">
+        <input type="text" id="wiki-search-input" placeholder="Search a term (e.g. anoikis, EMT, trogocytosis)..." autocomplete="off">
+      </div>
+
+      {{ content }}
+
+      <p id="wiki-no-results" class="wiki-no-results" style="display:none;">No terms match your search.</p>
+
+      {% assign terms = site.glossary | sort_natural: "title" %}
+      <div id="wiki-term-list" class="wiki-term-list">
+        {% assign current_letter = "" %}
+        {% for term in terms %}
+          {% assign first_letter = term.title | slice: 0, 1 | upcase %}
+          {% if first_letter != current_letter %}
+            {% unless forloop.first %}
+              </ul>
+            {% endunless %}
+            <h2 class="wiki-letter-heading">{{ first_letter }}</h2>
+            <ul class="wiki-letter-list">
+            {% assign current_letter = first_letter %}
+          {% endif %}
+          <li class="wiki-term-item" data-search="{{ term.title | append: ' ' | append: term.content | strip_html | downcase | escape }}">
+            <a href="{{ term.url | relative_url }}"><strong>{{ term.title }}</strong></a>
+            <span class="wiki-term-snippet">&mdash; {{ term.content | strip_html | truncatewords: 22 }}</span>
+          </li>
+          {% if forloop.last %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</main>
