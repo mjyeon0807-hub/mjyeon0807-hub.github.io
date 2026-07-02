@@ -166,6 +166,17 @@
   line-height: 1.5;
 }
 
+.home-news-ul li a {
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-news-ul li a:hover {
+  color: #0085A1;
+  text-decoration: underline;
+}
+
 .home-news-ul li:last-child {
   border-bottom: none;
 }
