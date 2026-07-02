@@ -1,0 +1,49 @@
+---
+layout: base
+---
+{% include header.html type="page" %}
+
+<main class="container-fluid fullwidth-pad wiki-page paper-detail-page">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+
+      <p class="wiki-breadcrumb"><a href="{{ '/research/#paper-pane' | relative_url }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Today's Paper</a></p>
+
+      <div class="paper-detail-card">
+        {% if page.image %}
+          <img class="paper-detail-img" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+        {% endif %}
+
+        <p class="paper-detail-meta">
+          <span class="paper-detail-date">{{ page.date | date: site.date_format }}</span>
+          {% if page.journal %}<span class="paper-detail-journal">{{ page.journal }}</span>{% endif %}
+        </p>
+
+        {% if page.authors %}<p class="paper-detail-authors">{{ page.authors }}</p>{% endif %}
+
+        {% if page.tags.size > 0 %}
+        <div class="paper-detail-tags">
+          {% for tag in page.tags %}<span class="wiki-tag">{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="paper-detail-body">
+          {{ content }}
+        </div>
+
+        {% if page.doi or page.link %}
+        <p class="paper-detail-source">
+          <a href="{% if page.doi %}https://doi.org/{{ page.doi }}{% else %}{{ page.link }}{% endif %}" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt" aria-hidden="true"></i> Read the original paper
+          </a>
+        </p>
+        {% endif %}
+      </div>
+
+      <div id="comments">
+        {% include comments.html %}
+      </div>
+
+    </div>
+  </div>
+</main>

@@ -22,7 +22,6 @@ navbar-links:
   Team: "team"
   Research: "research"
   Publications: "publications"
-  Wiki: "wiki"
   News: "news"
   Contact: "contact"
 
@@ -39,6 +38,25 @@ social-network-links:
   google-scholar: "H9L46kUAAAAJ&hl=en&oi=ao"
 
 rss-description: "Updates and news from the Lab of Molecular and Cellular Crosstalk (MXC)."
+
+#####################################################
+# --- Comments on "Today's Paper" posts (giscus) --- #
+#####################################################
+# giscus turns GitHub Discussions into a comment widget, active since 2026-07-02.
+# New Discussions are created in the "Ideas" category. To change the category,
+# pick a new one at https://giscus.app (repo must already have Discussions enabled)
+# and update category/category-id below.
+giscus:
+  repository: "mjyeon0807-hub/mjyeon0807-hub.github.io"
+  repository-id: "R_kgDORONe1Q"
+  category: "Ideas"
+  category-id: "DIC_kwDORONe1c4DAVNv"
+  mapping: "pathname"
+  hostname: "giscus.app"
+  reactions-enabled: "1"
+  emit-metadata: "0"
+  theme: "light"
+  lang: "ko"
 
 ###########################
 # --- General options --- #
@@ -106,6 +124,9 @@ collections:
   glossary:
     output: true
     permalink: /wiki/:slug/
+  papers:
+    output: true
+    permalink: /papers/:name/
 
 defaults:
   -
@@ -139,19 +160,18 @@ defaults:
   -
     scope:
       path: ""
+      type: "papers"
     values:
-      layout: "page"
-  -
-    scope:
-      path: "wiki.md"
-    values:
-      layout: "wiki-search"
-      comments: false
+      layout: "paper-post"
+      comments: true
       social-share: false
       css:
-        - "/assets/css/wiki.css"
-      js:
-        - "/assets/js/wiki-search.js"
+        - "/assets/css/paper.css"
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
 
 exclude:
   - CHANGELOG.md

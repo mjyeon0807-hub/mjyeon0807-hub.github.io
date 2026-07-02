@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Research page sub-tabs (Research Theme / Wiki / Today's Paper)
+   ========================================================================== */
+
+.research-subtabs {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0.5rem;
+  border-bottom: none;
+  margin-bottom: 2rem;
+  padding-bottom: 0.25rem;
+}
+
+.research-subtabs .nav-item {
+  flex-shrink: 0;
+}
+
+.research-subtabs .nav-link {
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #2c3e50;
+  background: #eaf4f8;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.research-subtabs .nav-link:hover {
+  background: #cfe8ff;
+  color: #2c3e50;
+}
+
+.research-subtabs .nav-link.active {
+  background: #0085A1;
+  color: #fff;
+}
+
+.research-tab-pane {
+  max-width: 1000px;
+  margin: 0 auto;
+}

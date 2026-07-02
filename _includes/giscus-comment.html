@@ -1,4 +1,4 @@
-{% if site.giscus.repository and site.giscus.hostname %}
+{% if site.giscus.repository and site.giscus.hostname and site.giscus.repository-id and site.giscus.category-id %}
 
 <script src="https://{{ site.giscus.hostname }}/client.js"
         data-repo="{{ site.giscus.repository }}"
@@ -9,6 +9,7 @@
         data-reactions-enabled="{{ site.giscus.reactions-enabled }}"
         data-emit-metadata="{{ site.giscus.emit-metadata }}"
         data-theme="{{ site.giscus.theme }}"
+        data-lang="{{ site.giscus.lang | default: 'en' }}"
         crossorigin="anonymous"
         async>
 </script>

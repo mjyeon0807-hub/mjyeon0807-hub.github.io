@@ -1,0 +1,258 @@
+/* ==========================================================================
+   Today's Paper — featured card, archive list, and detail page.
+   Visual language matches wiki.css / news.css: #2c3e50 navy, #0085A1 teal,
+   14px rounded cards, soft hover shadows, pill tags.
+   ========================================================================== */
+
+/* ---- Empty state ---- */
+.paper-empty-state {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  background: #f8f9fa;
+  border-radius: 14px;
+}
+
+/* ---- Featured (latest) card ---- */
+.paper-featured-card {
+  display: flex;
+  gap: 1.75rem;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.paper-featured-label {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 999px;
+  background: #0085A1;
+  color: #fff;
+}
+
+.paper-featured-image {
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.paper-featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  object-fit: cover;
+}
+
+.paper-featured-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.paper-featured-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem;
+  line-height: 1.4;
+}
+
+.paper-featured-title a {
+  color: #222;
+  text-decoration: none;
+}
+
+.paper-featured-title a:hover {
+  color: #0085A1;
+  text-decoration: underline;
+}
+
+.paper-featured-meta {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+.paper-featured-meta .paper-journal {
+  font-style: italic;
+}
+
+.paper-featured-summary {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+.paper-featured-tags {
+  margin-bottom: 0.9rem;
+}
+
+.paper-read-more {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0085A1;
+  text-decoration: none;
+}
+
+.paper-read-more:hover {
+  text-decoration: underline;
+}
+
+.paper-read-more i {
+  font-size: 0.75rem;
+  margin-left: 4px;
+}
+
+/* ---- Archive (older papers) ---- */
+.paper-archive-heading {
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+}
+
+.paper-archive-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.paper-archive-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.paper-archive-item:last-child {
+  border-bottom: none;
+}
+
+.paper-archive-date {
+  flex-shrink: 0;
+  width: 90px;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.paper-archive-item a {
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+
+.paper-archive-item a:hover {
+  color: #0085A1;
+  text-decoration: underline;
+}
+
+.paper-archive-journal {
+  color: #888;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* ---- Detail page ---- */
+.paper-detail-card {
+  padding: 1.8rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.paper-detail-img {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto 1.4rem;
+  border-radius: 10px;
+}
+
+.paper-detail-meta {
+  color: #888;
+  font-size: 0.92rem;
+  margin-bottom: 0.2rem;
+}
+
+.paper-detail-journal {
+  font-style: italic;
+}
+
+.paper-detail-journal::before {
+  content: "\00b7";
+  margin: 0 0.4rem;
+}
+
+.paper-detail-authors {
+  color: #666;
+  font-size: 0.92rem;
+  margin-bottom: 0.8rem;
+}
+
+.paper-detail-tags {
+  margin-bottom: 1rem;
+}
+
+.paper-detail-body {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #333;
+}
+
+.paper-detail-body p:last-child {
+  margin-bottom: 0;
+}
+
+.paper-detail-source {
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.paper-detail-source a {
+  font-weight: 700;
+  color: #0085A1;
+  text-decoration: none;
+}
+
+.paper-detail-source a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 600px) {
+  .paper-featured-card {
+    flex-direction: column;
+    padding: 1.3rem 1.4rem;
+  }
+
+  .paper-featured-image {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .paper-archive-item {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .paper-archive-date {
+    width: auto;
+  }
+
+  .paper-detail-card {
+    padding: 1.3rem 1.4rem;
+  }
+}
