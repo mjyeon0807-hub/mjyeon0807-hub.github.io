@@ -22,7 +22,7 @@
   <div class="container-fluid fullwidth-pad">
     <div class="row">
       <div class="col-12">
-        <div class="{{ include.type }}-heading">
+        <div class="{{ include.type }}-heading{% if include.class %} {{ include.class }}{% endif %}">
 
           <h1>{% if page.title %}{{ page.title | strip_html }}{% else %}<br/>{% endif %}</h1>
           {% if page.subtitle %}

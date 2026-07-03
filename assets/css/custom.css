@@ -141,4 +141,16 @@ main.container-fluid.fullwidth-pad > .row {
   margin-bottom: 1rem !important;
 }
 
-
+/* ==========================================================================
+   FIX: Shrink page title to 50% on Today's Paper detail pages and Wiki
+   glossary term pages (paper-post.html / glossary-term.html layouts,
+   both marked with the "title-sm" class via header.html's class param)
+   ========================================================================== */
+.intro-header .title-sm h1 {
+  font-size: 1.5625rem !important; /* 50% of base 3.125rem */
+}
+@media (min-width: 1200px) {
+  .intro-header .title-sm h1 {
+    font-size: 2.5rem !important; /* 50% of large-breakpoint 5rem */
+  }
+}
