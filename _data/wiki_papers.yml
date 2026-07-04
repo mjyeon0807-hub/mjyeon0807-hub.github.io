@@ -25,3 +25,45 @@ phelps-2025-formate:
   authors: "Catherine M. Phelps, Nathaniel B. Willis, Tingting Duan, et al., Giorgio Trinchieri, Marlies Meisel"
   year: 2025
   doi: "10.1016/j.cell.2025.06.018"
+
+yeon-2024-hdac9:
+  title: "HDAC9 and miR-512 Regulate CAGE-Promoted Anti-Cancer Drug Resistance and Cellular Proliferation"
+  authors: "Minjeong Yeon, Nayeon Kwon, Jaewhoon Jeoung, Dooil Jeoung"
+  year: 2024
+  doi: "10.3390/cimb46060311"
+
+yeon-2021-cage-s1pr1:
+  title: "The CAGE–miR-181b-5p–S1PR1 Axis Regulates Anticancer Drug Resistance and Autophagy in Gastric Cancer Cells"
+  authors: "Minjeong Yeon, Youngmi Kim, Deepak Pathak, Eunju Kwon, Dong Young Kim, Myeong Seon Jeong, Hyun Suk Jung, Dooil Jeoung"
+  year: 2021
+  doi: "10.3389/fcell.2021.666387"
+
+yeon-2023-cage-osimertinib:
+  title: "Cancer/testis antigen CAGE mediates osimertinib resistance in non-small cell lung cancer cells and predicts poor prognosis in patients with pulmonary adenocarcinoma"
+  authors: "Minjeong Yeon, Hankyu Lee, Jeongseon Yeo, Myeong Seon Jeong, Hyun Suk Jung, Hyerim Lee, Kyeonghee Shim, Hyein Jo, Doyong Jeon, Jaemoon Koh, Dooil Jeoung"
+  year: 2023
+  doi: "10.1038/s41598-023-43124-8"
+
+yeon-2023-parkin-kindlin2:
+  title: "Parkin Ubiquitination of Kindlin-2 Enables Mitochondria-Associated Metastasis Suppression"
+  authors: "Minjeong Yeon, Irene Bertolini, Ekta Agarwal, Jagadish C. Ghosh, Hsin-Yao Tang, David W. Speicher, Frederick Keeney, Khalid Sossey-Alaoui, Elzbieta Pluskota, Katarzyna Bialkowska, Edward F. Plow, Lucia R. Languino, Emmanuel Skordalakes, M. Cecilia Caino, Dario C. Altieri"
+  year: 2023
+  doi: "10.1016/j.jbc.2023.104774"
+
+yeon-2025-prkn-hmgb1:
+  title: "Parkin Induces Ubiquitination and Large Extracellular Vesicle Release of HMGB1 to Activate Antitumor Immunity"
+  authors: "Minjeong Yeon, Michela Perego, Khaled M. Elokely, Magid Abou-Gharbia, Wayne E. Childers, Andrew T. Milcarek, Irene Bertolini, Hsin-Yao Tang, Lucia R. Languino, Gary S. Stein, Prachi N. Ghule, Brad P. Vietje, Douglas T. Taatjes, Dario C. Altieri"
+  year: 2025
+  doi: "10.1158/0008-5472.CAN-25-0904"
+
+perego-2024-prkn-immunity:
+  title: "Parkin activates innate immunity and promotes antitumor immune responses"
+  authors: "Michela Perego, Minjeong Yeon, Ekta Agarwal, Andrew T. Milcarek, Irene Bertolini, Chiara Camisaschi, Jagadish C. Ghosh, Hsin-Yao Tang, Nathalie Grandvaux, Marcus Ruscetti, Andrew V. Kossenkov, Sarah Preston-Alp, Italo Tempera, Noam Auslander, Dario C. Altieri"
+  year: 2024
+  doi: "10.1172/JCI180983"
+
+milcarek-2026-mic60-pdac:
+  title: "Mitochondrial double-stranded RNA fuels pancreatic cancer growth via RIG-I/TLR3 inflammation"
+  authors: "Andrew T. Milcarek, Minjeong Yeon, Camilla Esposito, Prerna Kulkarni, Andrew V. Kossenkov, Jozef Madzo, Anneliese M. Faustino, Hsin-Yao Tang, Alessandra M. Storaci, Alessandro Palleschi, Marco Locatelli, Valentina Vaira, Mary V. Iacocca, Andrea Ward, Arvind Sabesan, Nicholas J. Petrelli, Michela Perego, Dario C. Altieri"
+  year: 2026
+  doi: "10.1073/pnas.2528281123"
