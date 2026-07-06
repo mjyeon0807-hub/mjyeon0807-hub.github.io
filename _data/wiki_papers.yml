@@ -67,3 +67,27 @@ milcarek-2026-mic60-pdac:
   authors: "Andrew T. Milcarek, Minjeong Yeon, Camilla Esposito, Prerna Kulkarni, Andrew V. Kossenkov, Jozef Madzo, Anneliese M. Faustino, Hsin-Yao Tang, Alessandra M. Storaci, Alessandro Palleschi, Marco Locatelli, Valentina Vaira, Mary V. Iacocca, Andrea Ward, Arvind Sabesan, Nicholas J. Petrelli, Michela Perego, Dario C. Altieri"
   year: 2026
   doi: "10.1073/pnas.2528281123"
+
+hooftman-2026-cgas-sting-review:
+  title: "The cGAS-STING pathway: Mechanism and medical implications"
+  authors: "Alexander Hooftman, Alexander Keller, Andrea Ablasser"
+  year: 2026
+  doi: "10.1016/j.cell.2026.06.001"
+
+terasaki-2026-mito-transfer:
+  title: "Mitochondrial transfer from immune to tumor cells enables lymph node metastasis"
+  authors: "Azusa Terasaki, Keshav Bhatnagar, Alexis T. Weiner, et al., Edgar Engleman, Derick Okwan-Duodu"
+  year: 2026
+  doi: "10.1016/j.cmet.2025.12.014"
+
+coughlan-2020-exosome-isolation:
+  title: "Exosome Isolation by Ultracentrifugation and Precipitation: A Comparison of Techniques for Downstream Analyses"
+  authors: "Christina Coughlan, Kimberly Bruce, Olivier Burgy, et al., Michael Graner, Huntington Potter"
+  year: 2020
+  doi: "10.1002/cpcb.110"
+
+welsh-2024-misev2023:
+  title: "Minimal information for studies of extracellular vesicles (MISEV): From basic to advanced approaches"
+  authors: "Joshua A. Welsh, Deborah C. I. Goberdhan, Lorraine O'Driscoll, et al., Clotilde Théry, Kenneth W. Witwer"
+  year: 2024
+  doi: "10.1002/jev2.12404"

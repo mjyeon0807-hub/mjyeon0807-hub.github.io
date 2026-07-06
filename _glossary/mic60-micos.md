@@ -2,7 +2,7 @@
 title: "Mic60 (IMMT / MICOS Complex)"
 term_id: mic60-micos
 category: signaling-pathways
-related: [viral-mimicry, necroptosis]
+related: [viral-mimicry, necroptosis, mitochondrial-transfer]
 sources: [milcarek-2026-mic60-pdac]
 ---
 
