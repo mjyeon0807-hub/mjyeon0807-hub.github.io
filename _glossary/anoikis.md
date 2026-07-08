@@ -2,7 +2,7 @@
 title: "Anoikis"
 term_id: anoikis
 category: tumor-microenvironment
-related: [anoikis-resistance, integrin-switch, ctc]
+related: [anoikis-resistance, integrin-switch, ctc, apoptosis]
 sources: [koltai-2026-anoikis, kim-2026-ctc]
 ---
 

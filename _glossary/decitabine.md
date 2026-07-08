@@ -2,7 +2,7 @@
 title: "Decitabine"
 term_id: decitabine
 category: signaling-pathways
-related: [parkin-prkn]
+related: [parkin-prkn, gasdermin, pyroptosis]
 sources: [perego-2024-prkn-immunity]
 ---
 

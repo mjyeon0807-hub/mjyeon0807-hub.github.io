@@ -2,7 +2,7 @@
 title: "cGAS-STING Pathway"
 term_id: cgas-sting
 category: signaling-pathways
-related: [parkin-prkn, hmgb1, viral-mimicry, micronuclei, r-loop, trex1, sasp, mitochondrial-transfer]
+related: [parkin-prkn, hmgb1, viral-mimicry, micronuclei, r-loop, trex1, sasp, mitochondrial-transfer, necroptosis]
 sources: [perego-2024-prkn-immunity, milcarek-2026-mic60-pdac, hooftman-2026-cgas-sting-review, terasaki-2026-mito-transfer]
 ---
 

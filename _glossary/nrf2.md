@@ -2,7 +2,7 @@
 title: "Nrf2"
 term_id: nrf2
 category: immunotherapy
-related: [formate, tc1-cells]
+related: [formate, tc1-cells, ferroptosis, drug-tolerant-persister-cells]
 sources: [phelps-2025-formate]
 ---
 
