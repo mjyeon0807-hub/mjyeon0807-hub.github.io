@@ -32,6 +32,9 @@ css:
       <div class="contact-address-text">
         <p>충북 청주시 흥덕구 오송읍 오송생명1로 194-15<br>
         충북대학교 의과대학 3호관 317호 (28160)</p>
+        <a class="contact-map-btn" href="https://map.naver.com/p/entry/place/1923945027?c=14.00,0,0,0,dh&amp;placePath=%2Fhome%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202608071626%26locale%3Dko%26svcName%3Dmap_pcv5" target="_blank" rel="noopener">
+          <i class="fas fa-map-marker-alt"></i> 네이버지도
+        </a>
       </div>
     </div>
   </div>
