@@ -19,8 +19,8 @@ layout: null
   --footer-hover-col: {{ site.footer-hover-col | default: "#0085A1" }};
 
   /* common CSS variables */
-  --body-font: 'Dotum', '돋움', sans-serif;
-  --header-font: 'Dotum', '돋움', sans-serif;
+  --body-font: 'Noto Sans KR', 'Dotum', '돋움', sans-serif;
+  --header-font: 'Noto Sans KR', 'Dotum', '돋움', sans-serif;
   --mid-col: #808080;
 }
 
