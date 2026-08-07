@@ -1,3 +1,14 @@
+- id: lee2026zoonotic
+  year: 2026
+  title: "Beyond Acute Infection: A Conceptual Framework Linking Zoonotic Bacterial Pathogens to Pulmonary Fibrosis and Lung Carcinogenesis"
+  authors: "Lee, Ju Hee; Kim, Nam Yee; Choi, Chang-Min; Yeon, Minjeong"
+  journal: "Biomedicines"
+  volume: "14"
+  number: "8"
+  pages: "1776"
+  doi: "10.3390/biomedicines14081776"
+  url: "https://www.mdpi.com/2227-9059/14/8/1776"
+
 - id: milcarek2026mitochondrial
   year: 2026
   title: "Mitochondrial double-stranded RNA fuels pancreatic cancer growth via RIG-I/TLR3 inflammation"
