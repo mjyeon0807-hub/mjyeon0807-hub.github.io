@@ -21,7 +21,7 @@ css:
 <!-- Recruiting banner -->
 <div class="home-banner">
   <a href="/news/recruitment-2026/">
-    <img src="/assets/img/recruiting%20banner.png" alt="대학원생, 학부생인턴 모집" class="home-banner-img">
+    <img src="/assets/img/recruiting%20banner_2.png" alt="대학원생, 학부생인턴 모집" class="home-banner-img">
   </a>
 </div>
 
