@@ -18,6 +18,13 @@ css:
   </div>
 </div>
 
+<!-- Recruiting banner -->
+<div class="home-banner">
+  <a href="/news/recruitment-2026/">
+    <img src="/assets/img/recruiting%20banner.png" alt="대학원생, 학부생인턴 모집" class="home-banner-img">
+  </a>
+</div>
+
 <!-- Research keywords as a visual band -->
 <div class="home-band">
   <div class="home-band-inner">

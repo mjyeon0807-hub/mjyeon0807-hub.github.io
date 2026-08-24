@@ -54,6 +54,18 @@
   text-align: left;
 }
 
+/* ---- Recruiting banner ---- */
+.home-banner {
+  margin-bottom: 1.5rem;
+}
+
+.home-banner img.home-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
 /* ---- Keyword band ---- */
 .home-band {
   background: #2c3e50;
