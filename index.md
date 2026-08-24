@@ -77,14 +77,14 @@ css:
 
 </div>
 
-<!-- Contact strip -->
-<div class="home-contact-strip">
-  <p><strong>Email</strong> &nbsp; mjyeon@chungbuk.ac.kr &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Address</strong> &nbsp; 충북 청주시 흥덕구 오송읍 오송생명1로 194-15, 충북대학교 의과대학 3호관 317호</p>
-</div>
-
 <!-- Recruiting banner -->
 <div class="home-banner">
   <a href="/news/recruitment-2026/">
     <img src="/assets/img/recruiting%20banner_2.png" alt="대학원생, 학부생인턴 모집" class="home-banner-img">
   </a>
+</div>
+
+<!-- Contact strip -->
+<div class="home-contact-strip">
+  <p><strong>Email</strong> &nbsp; mjyeon@chungbuk.ac.kr &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Address</strong> &nbsp; 충북 청주시 흥덕구 오송읍 오송생명1로 194-15, 충북대학교 의과대학 3호관 317호</p>
 </div>
