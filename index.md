@@ -34,7 +34,7 @@ css:
 <!-- Two-column: Latest Publications + Latest News -->
 <div class="home-columns">
 
-  <div class="home-col">
+  <div class="home-col home-col-pub">
     <h3>Latest Publications</h3>
     <ul class="home-pub-ul">
       {% assign pubs = site.data.publications | sort: "year" | reverse %}
@@ -61,7 +61,7 @@ css:
     <a class="home-link" href="/publications">View all publications →</a>
   </div>
 
-  <div class="home-col">
+  <div class="home-col home-col-news">
     <h3>Latest News</h3>
     <ul class="home-news-ul">
       {% assign news_items = site.news | sort: "date" | reverse %}

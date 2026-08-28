@@ -276,6 +276,11 @@
     gap: 1.2rem;
   }
 
+  /* News before Publications on mobile */
+  .home-col-news {
+    order: -1;
+  }
+
   .home-col {
     padding: 1.2rem 1.4rem;
   }
