@@ -2,6 +2,18 @@
    Home page — band-style layout
    ========================================================================== */
 
+/* ---- Goal banner ---- */
+.home-goal-banner {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.home-goal-banner img.home-goal-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
 /* ---- Hero section ---- */
 .home-hero {
   display: grid;
