@@ -6,6 +6,11 @@ css:
   - "/assets/css/home.css"
 ---
 
+<!-- Goal banner -->
+<div class="home-goal-banner">
+  <img src="/assets/img/banner_goal.png" alt="우리들이 하는 분자수준의 연구가 퍼져나가 세상에 도움이 되길 · 우리가 행복해야 위리의 연구도 가치가 있다 · 답이 정해지지 않은 것에 대한 물음, 우리는 즐긴다" class="home-goal-banner-img">
+</div>
+
 <!-- Hero welcome -->
 <div class="home-hero">
   <div class="home-hero-photo">
@@ -16,11 +21,6 @@ css:
 
     <p class="home-hero-en">Welcome to the <strong>Molecular Intra/Intercellular Communication Laboratory (MICL)</strong> in the Department of Biochemistry at Chungbuk National University Medical School. Our laboratory investigates how molecular and intercellular communication within the tumor microenvironment drives cancer malignancy, with the ultimate goal of discovering novel targeted therapeutics.</p>
   </div>
-</div>
-
-<!-- Goal banner -->
-<div class="home-goal-banner">
-  <img src="/assets/img/banner_goal.png" alt="우리들이 하는 분자수준의 연구가 퍼져나가 세상에 도움이 되길 · 우리가 행복해야 위리의 연구도 가치가 있다 · 답이 정해지지 않은 것에 대한 물음, 우리는 즐긴다" class="home-goal-banner-img">
 </div>
 
 <!-- Research keywords as a visual band -->
