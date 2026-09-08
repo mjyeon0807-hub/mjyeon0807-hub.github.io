@@ -2,6 +2,12 @@
 layout: base
 ---
 
+{% if page.top-banner %}
+<div class="page-top-banner">
+  <img src="{{ page.top-banner }}" alt="{{ page.top-banner-alt }}" class="page-top-banner-img">
+</div>
+{% endif %}
+
 {% include header.html type="page" %}
 
 <main class="container-fluid fullwidth-pad">

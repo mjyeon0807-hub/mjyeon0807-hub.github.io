@@ -4,12 +4,9 @@ title: "WELCOME"
 subtitle: "Molecular Intra/Intercellular Communication Laboratory"
 css:
   - "/assets/css/home.css"
+top-banner: "/assets/img/banner_goal.png"
+top-banner-alt: "우리들이 하는 분자수준의 연구가 퍼져나가 세상에 도움이 되길 · 우리가 행복해야 위리의 연구도 가치가 있다 · 답이 정해지지 않은 것에 대한 물음, 우리는 즐긴다"
 ---
-
-<!-- Goal banner -->
-<div class="home-goal-banner">
-  <img src="/assets/img/banner_goal.png" alt="우리들이 하는 분자수준의 연구가 퍼져나가 세상에 도움이 되길 · 우리가 행복해야 위리의 연구도 가치가 있다 · 답이 정해지지 않은 것에 대한 물음, 우리는 즐긴다" class="home-goal-banner-img">
-</div>
 
 <!-- Hero welcome -->
 <div class="home-hero">

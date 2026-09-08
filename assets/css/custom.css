@@ -83,6 +83,22 @@ nav.navbar.navbar-custom .navbar-brand-logo {
 }
 
 /* ==========================================================================
+   Top banner (above the page title) — opt-in via page front matter `top-banner`
+   ========================================================================== */
+.page-top-banner {
+  max-width: 1000px;
+  margin: 1.5rem auto 0.5rem;
+  padding: 0 15px;
+}
+
+.page-top-banner .page-top-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* ==========================================================================
    FIX: Remove old margin-top that compensated for fixed-top navbar.
    Now the navbar is in normal document flow, so no top margin is needed.
    ========================================================================== */
