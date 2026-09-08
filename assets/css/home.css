@@ -4,13 +4,15 @@
 
 /* ---- Goal banner ---- */
 .home-goal-banner {
-  margin: 1.5rem 0 0.5rem;
+  margin: 1rem 0 2rem;
+  text-align: center;
 }
 
 .home-goal-banner img.home-goal-banner-img {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
+  margin: 0 auto;
   border-radius: 10px;
 }
 
@@ -272,6 +274,10 @@
   .home-hero img.home-hero-img {
     width: 100%;
     max-width: 100%;
+  }
+
+  .home-goal-banner img.home-goal-banner-img {
+    width: 100%;
   }
 
   .home-band-inner {
