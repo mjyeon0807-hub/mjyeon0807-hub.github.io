@@ -86,7 +86,7 @@ nav.navbar.navbar-custom .navbar-brand-logo {
    Top banner (above the page title) — opt-in via page front matter `top-banner`
    ========================================================================== */
 .page-top-banner {
-  max-width: 800px; /* 80% of the 1000px content width */
+  max-width: 1000px;
   margin: 1.5rem auto 2.5rem;
   padding: 0 15px;
   text-align: center;

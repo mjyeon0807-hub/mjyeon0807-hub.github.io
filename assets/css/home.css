@@ -54,15 +54,17 @@
   text-align: left;
 }
 
-/* ---- Recruiting banner ---- */
+/* ---- Goal banner (bottom) ---- */
 .home-banner {
   margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .home-banner img.home-banner-img {
-  width: 100%;
+  width: 70%;
   height: auto;
   display: block;
+  margin: 0 auto;
   border-radius: 10px;
 }
 
@@ -269,6 +271,10 @@
 
   .home-kw-dot {
     display: none;
+  }
+
+  .home-banner img.home-banner-img {
+    width: 100%;
   }
 
   .home-columns {
