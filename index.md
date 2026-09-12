@@ -15,9 +15,9 @@ top-banner-link: "/news/recruitment-2026/"
     <img src="/assets/img/MICL-bac.png" alt="MIC Lab" class="home-hero-img">
   </div>
   <div class="home-hero-text">
-    <p class="home-hero-kr">충청북도 오송에 위치한 충북대학교 의과대학 생화학교실 <strong>세포내외분자소통연구실 (Molecular Intra/intercellular Communication Laboratory, MICL)</strong>에 오신 것을 환영합니다. <strong>M.I.C, '마이크'</strong>의 역할처럼 저희가 하는 <strong>'작은 연구가 퍼져나가길 바라는 마음'</strong>으로, 그리고 그 연구가 <strong>'사람의 질병을 치유하는데 도움'</strong>이 될 수 있었으면 좋겠다라는 마음을 담아 연구실 이름을 지었습니다.  
+    <p class="home-hero-kr">충청북도 오송에 위치한 충북대학교 의과대학 생화학교실 <strong>세포내외분자소통연구실 (Molecular Intra/intercellular Communication Laboratory, MICL)</strong>에 오신 것을 환영합니다. <strong>M.I.C, '마이크'</strong>의 역할처럼 저희가 하는 <strong>'작은 연구가 퍼져나가길 바라는 마음'</strong>으로, 그리고 그 연구가 <strong>'사람의 질병을 치유하는데 도움'</strong>이 될 수 있었으면 좋겠다라는 마음을 담아 연구실 이름을 지었습니다.</p>
 
-    저희 연구실은 세포 안에서, 그리고 조직 내의 여러 세포간 일어나는 분자 커뮤니케이션에 대한 연구를 하고있습니다. 특히, 세포호흡의 중추인 미토콘드리아와 세포가 밖으로 분비하는 세포외소포체에 관심을 가지고 있으며 이를 암을 포함한 다양한 질병과 연관지어 치료제에 대한 내성 극복, 그리고 표적 치료제 발굴을 목표로 하고 있습니다. </p>
+    <p class="home-hero-kr">저희 연구실은 세포 안에서, 그리고 조직 내의 여러 세포간 일어나는 분자 커뮤니케이션에 대한 연구를 하고있습니다. 특히, 세포호흡의 중추인 미토콘드리아와 세포가 밖으로 분비하는 세포외소포체에 관심을 가지고 있으며 이를 암을 포함한 다양한 질병과 연관지어 치료제에 대한 내성 극복, 그리고 표적 치료제 발굴을 목표로 하고 있습니다. </p>
 
   </div>
 </div>
