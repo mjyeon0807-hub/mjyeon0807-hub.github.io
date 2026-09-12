@@ -4,7 +4,7 @@ title: "WELCOME"
 subtitle: "Molecular Intra/Intercellular Communication Laboratory"
 css:
   - "/assets/css/home.css"
-top-banner: "/assets/img/recruiting%20banner_2.png"
+top-banner: "/assets/img/recruiting%20banner.png"
 top-banner-alt: "대학원생, 학부생인턴 모집"
 top-banner-link: "/news/recruitment-2026/"
 ---
