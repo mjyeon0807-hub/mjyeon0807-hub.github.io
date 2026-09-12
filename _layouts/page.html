@@ -4,7 +4,13 @@ layout: base
 
 {% if page.top-banner %}
 <div class="page-top-banner">
+  {% if page.top-banner-link %}
+  <a href="{{ page.top-banner-link }}">
+    <img src="{{ page.top-banner }}" alt="{{ page.top-banner-alt }}" class="page-top-banner-img">
+  </a>
+  {% else %}
   <img src="{{ page.top-banner }}" alt="{{ page.top-banner-alt }}" class="page-top-banner-img">
+  {% endif %}
 </div>
 {% endif %}
 
