@@ -2,7 +2,7 @@
 title: "Tumor Hypoxia"
 term_id: hypoxia
 category: concepts
-related: [pseudohypoxia, vessel-normalization, tam, spp1-tam]
+related: [pseudohypoxia, vessel-normalization, tam, spp1-tam, matrix-stiffness]
 sources: [vuong-2026-hypoxia-ccrcc]
 ---
 

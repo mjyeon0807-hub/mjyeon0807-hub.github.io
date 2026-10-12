@@ -2,7 +2,7 @@
 title: "Immune Checkpoint Inhibitor (ICI)"
 term_id: ici
 category: immunotherapy
-related: [tc1-cells, braf-v600e-melanoma-model]
+related: [tc1-cells, braf-v600e-melanoma-model, immunoediting]
 sources: [phelps-2025-formate]
 ---
 

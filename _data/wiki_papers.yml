@@ -127,3 +127,33 @@ gu-2026-il8-cxcr2:
   authors: "Xuyu Gu, Qiyu Fang, Jia Yu, Ting Yu, Huashan Shi, Kaiqi Jin, Lei Jiang, Wentian Zhang"
   year: 2026
   doi: "10.1002/advs.202508001"
+
+liu-2026-pdac-senescence:
+  title: "Chemotherapy-induced senescence promotes stroma stiffness and antioxidant adaptation to promote chemoresistance in pancreatic ductal adenocarcinoma"
+  authors: "Xinxin Liu, Zhihua Huang, Bohan Yang, et al., Xiaojie Xu, Yinmo Yang"
+  year: 2026
+  doi: "10.1038/s41467-026-75772-5"
+
+caligiuri-2023-caf-review:
+  title: "Activated fibroblasts in cancer: Perspectives and challenges"
+  authors: "Giuseppina Caligiuri, David A. Tuveson"
+  year: 2023
+  doi: "10.1016/j.ccell.2023.02.015"
+
+elbanna-2026-cell-stiffening:
+  title: "Environmentally induced cell stiffening shapes metastatic site selection by tuning the immune vulnerability of cancer cells"
+  authors: "Yassmin A. Elbanna, Maria Tello-Lafoz, Aliya Holland, et al., Scott R. Manalis, Morgan Huse"
+  year: 2026
+  doi: "10.1016/j.immuni.2026.06.025"
+
+zhao-2026-stress-kynurenine:
+  title: "Chronic Stress Promotes Gastric Cancer Metastasis by Inducing Microbiota-Associated Kynurenine Accumulation and Macrophage Remodeling"
+  authors: "Sicheng Zhao, Zhiyuan Song, Jingcheng Zhang, et al., Tao Jiang, Guangji Zhang"
+  year: 2026
+  doi: "10.1002/advs.77612"
+
+kim-2018-cre-loxp:
+  title: "Mouse Cre-LoxP system: general principles to determine tissue-specific roles of target genes"
+  authors: "Hyeonhui Kim, Minki Kim, Sun-Kyoung Im, Sungsoon Fang"
+  year: 2018
+  doi: "10.5625/lar.2018.34.4.147"

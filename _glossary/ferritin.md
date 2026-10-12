@@ -2,7 +2,7 @@
 title: "Ferritin"
 term_id: ferritin
 category: concepts
-related: [ferritinophagy, stress-granules, ferroptosis]
+related: [ferritinophagy, stress-granules, ferroptosis, slc7a11]
 sources: [ge-2026-stress-granules-ferroptosis]
 ---
 

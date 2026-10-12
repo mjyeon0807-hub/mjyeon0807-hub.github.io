@@ -2,7 +2,7 @@
 title: "Apoptosis"
 term_id: apoptosis
 category: concepts
-related: [regulated-cell-death, apoptosis-induced-proliferation, anoikis, immunogenic-cell-death]
+related: [regulated-cell-death, apoptosis-induced-proliferation, anoikis, immunogenic-cell-death, senolytic, cellular-senescence]
 sources: [conrad-2026-cell-death-review]
 ---
 

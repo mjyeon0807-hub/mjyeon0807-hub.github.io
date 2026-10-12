@@ -2,7 +2,7 @@
 title: "Drug-Tolerant Persister (DTP) Cells"
 term_id: drug-tolerant-persister-cells
 category: drug-resistance
-related: [ferroptosis, nrf2]
+related: [ferroptosis, nrf2, cellular-senescence]
 sources: [conrad-2026-cell-death-review]
 ---
 

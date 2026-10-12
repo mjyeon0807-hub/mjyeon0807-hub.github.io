@@ -2,8 +2,8 @@
 title: "EMT / p-EMT / MET"
 term_id: emt-p-emt-met
 category: tumor-microenvironment
-related: [ctc, anoikis-resistance, ccsc, hypoxia]
-sources: [kim-2026-ctc, vuong-2026-hypoxia-ccrcc]
+related: [ctc, anoikis-resistance, ccsc, hypoxia, maf, matrix-stiffness]
+sources: [kim-2026-ctc, vuong-2026-hypoxia-ccrcc, caligiuri-2023-caf-review]
 ---
 
 Epithelial-mesenchymal transition (EMT) is the process by which epithelial cells lose polarity and cell-cell adhesion to gain migratory, mesenchymal-like properties; the reverse process is mesenchymal-to-epithelial transition (MET).

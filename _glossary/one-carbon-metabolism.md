@@ -2,7 +2,7 @@
 title: "One-Carbon (1C) Metabolism"
 term_id: one-carbon-metabolism
 category: immunotherapy
-related: [formate, pyruvate-formate-lyase]
+related: [formate, pyruvate-formate-lyase, kynurenine-pathway]
 sources: [phelps-2025-formate]
 ---
 

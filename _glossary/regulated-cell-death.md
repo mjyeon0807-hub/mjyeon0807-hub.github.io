@@ -2,7 +2,7 @@
 title: "Regulated Cell Death (RCD)"
 term_id: regulated-cell-death
 category: concepts
-related: [apoptosis, necroptosis, pyroptosis, ferroptosis, immunogenic-cell-death]
+related: [apoptosis, necroptosis, pyroptosis, ferroptosis, immunogenic-cell-death, cellular-senescence]
 sources: [conrad-2026-cell-death-review]
 ---
 
