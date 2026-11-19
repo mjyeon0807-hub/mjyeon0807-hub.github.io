@@ -16,8 +16,12 @@ subtitle: "Lab Members"
     <h1 class="team2-name">Minjeong Yeon, Ph.D.</h1>
 
     <div class="team2-bio">
+      <p><strong>본인 소개</strong></p>
       <p>
-        Minjeong Yeon, Ph.D., is an Assistant Professor of department of Biochemistry at Chungbuk National University Medical School. She earned her Ph.D. in Biochemistry from Kangwon National University in 2022, where her research focused on cancer drug resistance and autophagic flux. Prior to her current faculty appointment, Dr. Yeon completed a four-year postdoctoral fellowship in the Genome Regulation and Cell Signaling Program at The Wistar Institute of Anatomy and Biology.
+        MICL에서 연구, 행정, 학생 지도 등 모든 업무에 책임이 있는 연구책임자 연민정 입니다. 2022년 2월 강원대학교 생화학과에서 박사 학위를 받고 4년동안 미국 필라델피아 위스타연구소에서 박사후연구원으로 재직하였습니다. 2026년 3월, 오랫동안 꿈꿔왔던 교수라는 직책을 충북대학교 의과대학 생화학교실에서 맡게 되었습니다.
+      </p>
+      <p>
+        학생들이 중심이되는, 학문적으로 성장할 수 있는 공간이 되는, 연구가 어렵고 힘들지만 함께 웃으며 나아갈 수 있는 그런 연구실을 만들어 나가려고 합니다. MICL에서 진행하는 연구들이 인간의 삶의 질 향상에 도움이 되는 그날까지 함께하는 학생들과 묵묵히, 꾸준히 앞으로 걸어가겠습니다.
       </p>
       <p>
         <strong>취미</strong> : 운동 (Running, Crossfit, etc....)<br>
@@ -80,6 +84,7 @@ subtitle: "Lab Members"
     <h1 class="team2-name">Beomseop Shin, B.S.</h1>
 
     <div class="team2-bio">
+      <p><strong>본인 소개</strong></p>
       <p>
         학부에서 수학교육을 전공했습니다. 직접 실험하고 데이터를 분석해 보고 싶어서 입학하게 되었습니다.
       </p>
