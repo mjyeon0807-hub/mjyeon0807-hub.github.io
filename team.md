@@ -19,6 +19,11 @@ subtitle: "Lab Members"
       <p>
         Minjeong Yeon, Ph.D., is an Assistant Professor of department of Biochemistry at Chungbuk National University Medical School. She earned her Ph.D. in Biochemistry from Kangwon National University in 2022, where her research focused on cancer drug resistance and autophagic flux. Prior to her current faculty appointment, Dr. Yeon completed a four-year postdoctoral fellowship in the Genome Regulation and Cell Signaling Program at The Wistar Institute of Anatomy and Biology.
       </p>
+      <p>
+        <strong>취미</strong> : 운동 (Running, Crossfit, etc....)<br>
+        <strong>특기</strong> : 의욕넘쳐 일 만들고 고생하기<br>
+        <strong>좌우명</strong> : 놀땐 놀고, 할땐 하자. 후회없는 과거를 만들자.
+      </p>
     </div>
   </div>
 
