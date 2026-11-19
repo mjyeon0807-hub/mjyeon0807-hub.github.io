@@ -91,6 +91,11 @@ subtitle: "Lab Members"
   <div class="team2-edu-list">
     <ul class="team2-list">
       <li class="team2-item">
+        <div class="team2-item-title">M.S.-Ph.D. in Medicine</div>
+        <p class="team2-item-detail">2027.03– Chungbuk National University, Korea</p>
+      </li>
+
+      <li class="team2-item">
         <div class="team2-item-title">B.S. in Mathematics Education</div>
         <p class="team2-item-detail">–2025.08 Catholic Kwandong University, Korea</p>
       </li>
