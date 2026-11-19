@@ -62,3 +62,38 @@ subtitle: "Lab Members"
 <hr class="team-divider">
 
 <!-- Copy this whole <div class="team2"> ... </div> block to add more people -->
+
+<div class="team2">
+  <!-- Row 1 / Left -->
+  <div class="team2-photo">
+    <img src="/assets/img/beomsup%20shin.jpg" alt="Beomseop Shin photo">
+  </div>
+
+  <!-- Row 1 / Right -->
+  <div class="team2-header">
+    <div class="team2-kicker">Graduate Student</div>
+    <h1 class="team2-name">Beomseop Shin, B.S.</h1>
+
+    <div class="team2-bio">
+      <p>
+        학부에서 수학교육을 전공했습니다. 직접 실험하고 데이터를 분석해 보고 싶어서 입학하게 되었습니다.
+      </p>
+      <p>
+        <strong>취미</strong> : 운동, 음악 감상
+      </p>
+    </div>
+  </div>
+
+  <!-- Row 3 / Left -->
+  <div class="team2-label team2-edu-label">Education</div>
+
+  <!-- Row 3 / Right -->
+  <div class="team2-edu-list">
+    <ul class="team2-list">
+      <li class="team2-item">
+        <div class="team2-item-title">B.S. in Mathematics Education</div>
+        <p class="team2-item-detail">–2025.08 Catholic Kwandong University, Korea</p>
+      </li>
+    </ul>
+  </div>
+</div>
