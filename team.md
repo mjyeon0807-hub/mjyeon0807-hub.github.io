@@ -145,7 +145,7 @@ subtitle: "Lab Members"
     <ul class="team2-list">
       <li class="team2-item">
         <div class="team2-item-title">B.S. in Biology</div>
-        <p class="team2-item-detail">2023.03– Chungbuk National University, Korea</p>
+        <p class="team2-item-detail">2025.03– Chungbuk National University, Korea</p>
       </li>
     </ul>
   </div>
