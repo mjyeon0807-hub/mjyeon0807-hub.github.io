@@ -112,3 +112,41 @@ subtitle: "Lab Members"
     </ul>
   </div>
 </div>
+
+<hr class="team-divider">
+
+<div class="team2">
+  <!-- Row 1 / Left -->
+  <div class="team2-photo">
+    <img src="/assets/img/heewon.jpg" alt="Heewon Yang photo">
+  </div>
+
+  <!-- Row 1 / Right -->
+  <div class="team2-header">
+    <div class="team2-kicker">Undergraduate Intern</div>
+    <h1 class="team2-name">Heewon Yang</h1>
+
+    <div class="team2-bio">
+      <p><strong>본인 소개</strong></p>
+      <p>
+        생명현상의 원리를 탐구하는 과정에 매력을 느껴 생물학을 전공하게 되었습니다. 실험과 꾸준한 학습을 통해 전문성을 갖춘 연구자로 성장하고자 노력하겠습니다.
+      </p>
+      <p>
+        <strong>취미</strong> : 그림 그리기, 게임, 음악 감상
+      </p>
+    </div>
+  </div>
+
+  <!-- Row 3 / Left -->
+  <div class="team2-label team2-edu-label">Education</div>
+
+  <!-- Row 3 / Right -->
+  <div class="team2-edu-list">
+    <ul class="team2-list">
+      <li class="team2-item">
+        <div class="team2-item-title">B.S. in Biology</div>
+        <p class="team2-item-detail">2023.03–Current Chungbuk National University, Korea</p>
+      </li>
+    </ul>
+  </div>
+</div>
